@@ -16,9 +16,9 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from UltronBot import *
-from UltronBot.helpers import *
-from UltronBot.config import Config
+from RomeoBot import *
+from RomeoBot.helpers import *
+from RomeoBot.config import Config
 
 
 # this shit handles errors
@@ -47,7 +47,7 @@ def errors_handler(func):
             ftext += "\nyou may not report this error if you've"
             ftext += "\nany confidential data here, no one will see your data\n\n"
 
-            ftext += "--------BEGIN UltronBot TRACEBACK LOG--------"
+            ftext += "--------BEGIN RomeoBot TRACEBACK LOG--------"
             ftext += "\nDate: " + date
             ftext += "\nGroup ID: " + str(errors.chat_id)
             ftext += "\nSender ID: " + str(errors.sender_id)
@@ -57,7 +57,7 @@ def errors_handler(func):
             ftext += str(traceback.format_exc())
             ftext += "\n\nError text:\n"
             ftext += str(sys.exc_info()[1])
-            ftext += "\n\n--------END UltronBot TRACEBACK LOG--------"
+            ftext += "\n\n--------END RomeoBot TRACEBACK LOG--------"
 
             command = "git log --pretty=format:\"%an: %s\" -5"
 
@@ -75,4 +75,4 @@ def errors_handler(func):
 
     return wrapper
 
-# UltronBot
+# RomeoBot
