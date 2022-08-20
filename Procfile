@@ -1,1 +1,1 @@
-worker: bash UltronBot.sh
+worker: bash RomeoBot.sh
