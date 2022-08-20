@@ -1,4 +1,4 @@
-# IF YOU ARE HOSTING UltronBot ON OTHER VPS OR LOCALLY RATHER THAN HEROKU
+# IF YOU ARE HOSTING RomeoBot ON OTHER VPS OR LOCALLY RATHER THAN HEROKU
 # THEN DON'T EDIT THIS FILE.
 # GO AND EDIT ex_config.py AND RENAME IT TO config.py
 # AND FILL THE REQUIRED VARS THERE.
@@ -54,7 +54,7 @@ class Config(object):
         PM_LOG_ID = int(PM_LOG_ID)
     PM_PERMIT = os.environ.get("PM_PERMIT", None)
     REMOVE_BG_API = os.environ.get("REMOVE_BG_API", None)
-    ULTRONBOT_SESSION = os.environ.get("ULTRONBOT_SESSION", None)
+    ROMEOBOT_SESSION = os.environ.get("ULTRONBOT_SESSION", None)
     SESSION_2 = os.environ.get("SESSION_2", None)
     SESSION_3 = os.environ.get("SESSION_3", None)
     SESSION_4 = os.environ.get("SESSION_4", None)
