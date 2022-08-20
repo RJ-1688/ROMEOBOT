@@ -4,13 +4,13 @@ from telethon import TelegramClient
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
-from UltronBot.config import Config
+from RomeoBot.config import Config
 
 
-if Config.ULTRONBOT_SESSION:
-    session = StringSession(str(Config.ULTRONBOT_SESSION))
+if Config.ROMEOBOT_SESSION:
+    session = StringSession(str(Config.ROMEOBOT_SESSION))
 else:
-    session = "UltronBot"
+    session = "RomeoBot"
 
 try:
     Hell = TelegramClient(
@@ -22,7 +22,7 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"ULTRONBOT_SESSION - {e}")
+    print(f"ROMEOBOT_SESSION - {e}")
     sys.exit()
 
 
