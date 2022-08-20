@@ -1,13 +1,13 @@
 import functools
 from telethon import events
-from UltronBot import *
+from RomeoBot import *
 
 bothandler = Config.BOT_HANDLER
 
 
-def UltronBot_cmd(add_cmd, is_args=False):
+def RomeoBot_cmd(add_cmd, is_args=False):
     def cmd(func):
-        UltronBot = bot.tgbot
+        RomeoBot = bot.tgbot
         if is_args:
             pattern = bothandler + add_cmd + "(?: |$)(.*)"
         elif is_args == "simp":
@@ -18,7 +18,7 @@ def UltronBot_cmd(add_cmd, is_args=False):
             pattern = bothandler + add_cmd + " (\S+)"
         else:
             pattern = bothandler + add_cmd + "$"
-        UltronBot.add_event_handler(
+        RomeoBot.add_event_handler(
             func, events.NewMessage(incoming=True, pattern=pattern)
         )
 
@@ -29,8 +29,8 @@ def is_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            UltronBot = bot.tgbot
-            perms = await UltronBot.get_permissions(event.chat_id, event.sender_id)
+            RomeoBot = bot.tgbot
+            perms = await RomeoBot.get_permissions(event.chat_id, event.sender_id)
             user = event.sender_id
             ForGo10 = bot.uid
             if perms.is_admin:
@@ -51,9 +51,9 @@ def is_bot_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            UltronBot = bot.tgbot
-            boat = await UltronBot.get_me()
-            perms = await UltronBot.get_permissions(event.chat_id, boat)
+            RomeoBot = bot.tgbot
+            boat = await RomeoBot.get_me()
+            perms = await RomeoBot.get_permissions(event.chat_id, boat)
             if perms.is_admin:
                 await func(event)
             else:
