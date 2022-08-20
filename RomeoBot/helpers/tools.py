@@ -3,8 +3,8 @@ import re
 
 from telethon import events
 
-from UltronBot import bot
-from UltronBot.config import Config
+from RomeoBot import bot
+from RomeoBot.config import Config
 
 
 # forward check
@@ -90,4 +90,4 @@ def no_grp():
     return decorator
 
 
-# UltronBot
+# RomeoBot
