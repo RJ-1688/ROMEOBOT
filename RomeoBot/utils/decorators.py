@@ -9,10 +9,10 @@ from pathlib import Path
 from telethon import TelegramClient, events
 from telethon.errors import MessageIdInvalidError, MessageNotModifiedError
 
-from UltronBot import LOGS, bot, tbot
-from UltronBot.clients import H2, H3, H4, H5
-from UltronBot.config import Config
-from UltronBot.helpers import *
+from RomeoBot import LOGS, bot, tbot
+from RomeoBot.clients import H2, H3, H4, H5
+from RomeoBot.config import Config
+from RomeoBot.helpers import *
 
 
 # admin cmd or normal user cmd
@@ -313,4 +313,4 @@ def command(**args):
 
     return decorator
 
-# UltronBot
+# RomeoBot
