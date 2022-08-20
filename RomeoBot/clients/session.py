@@ -82,7 +82,7 @@ else:
     H5 = None
 
 
-UltronBot = TelegramClient(
+RomeoBot = TelegramClient(
     session="Hell-TBot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
