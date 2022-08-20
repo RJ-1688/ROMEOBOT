@@ -1,21 +1,21 @@
 import datetime
 import time
 
-from UltronBot import *
-from UltronBot.clients import *
-from UltronBot.config import Config
-from UltronBot.helpers import *
-from UltronBot.utils import *
-from UltronBot.random_strings import *
-from UltronBot.version import __hell__
-from UltronBot.sql.gvar_sql import gvarstat
+from RomeoBot import *
+from RomeoBot.clients import *
+from RomeoBot.config import Config
+from RomeoBot.helpers import *
+from RomeoBot.utils import *
+from RomeoBot.random_strings import *
+from RomeoBot.version import __hell__
+from RomeoBot.sql.gvar_sql import gvarstat
 from telethon import version
 
-hell_logo = "./UltronBot/resources/pics/UltronBot_logo.jpg"
-cjb = "./UltronBot/resources/pics/cjb.jpg"
-restlo = "./UltronBot/resources/pics/rest.jpeg"
-shuru = "./UltronBot/resources/pics/shuru.jpg"
-shhh = "./UltronBot/resources/pics/chup_madarchod.jpeg"
+hell_logo = "./RomeoBot/resources/pics/hellbot_logo.jpg"
+cjb = "./RomeoBot/resources/pics/cjb.jpg"
+restlo = "./RomeoBot/resources/pics/rest.jpeg"
+shuru = "./RomeoBot/resources/pics/shuru.jpg"
+shhh = "./RomeoBot/resources/pics/chup_madarchod.jpeg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
 hell_ver = __hell__
@@ -37,17 +37,17 @@ else:
     abuse_m ="Disabled"
 
 
-my_channel = Config.MY_CHANNEL or "@UltronBot_OP"
-my_group = Config.MY_GROUP or "@UltronBot_XD"
+my_channel = Config.MY_CHANNEL or "@Bot_Updates_Chnl"
+my_group = Config.MY_GROUP or "@Bot_Support_Grp"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/UltronBot_XD"
-hell_channel = f"[✨ԱӀէɾօղβօէ✨]({chnl_link})"
-grp_link = "https://t.me/UltronBot_Chat"
-hell_grp = f"[✨ԱӀէɾօղβօէ Ɠɾօմք✨]({grp_link})"
+chnl_link = "https://t.me/Bot_Updates_Chnl"
+hell_channel = f"[✨𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙✨]({chnl_link})"
+grp_link = "https://t.me/Bot_Support_Grp"
+hell_grp = f"[✨𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙✨]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user
@@ -66,4 +66,4 @@ WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attract
 """
 # will add more soon
 
-# UltronBot
+# RomeoBot
