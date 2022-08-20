@@ -17,7 +17,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 
-from UltronBot.sql.gvar_sql import gvarstat
+from RomeoBot.sql.gvar_sql import gvarstat
 from . import *
 
 hell_row = Config.BUTTONS_IN_HELP
@@ -31,7 +31,7 @@ if mybot.startswith("@"):
 else:
     botname = f"@{mybot}"
 LOG_GP = Config.LOGGER_ID
-USER_BOT_WARN_ZERO = "𝔼𝕟𝕠𝕦𝕘𝕙 𝕆𝕗 𝕐𝕠𝕦𝕣 𝔽𝕝𝕠𝕠𝕕𝕚𝕟𝕘 𝕀𝕟 𝕄𝕪 𝕄𝕒𝕤𝕥𝕖𝕣'𝕤 𝕌𝕃𝕋ℝ𝕆ℕℙ𝕄!! \n\n**🚫 𝔹𝕝𝕠𝕔𝕜𝕖𝕕 𝕒𝕟𝕕 ℝ𝕖𝕡𝕠𝕣𝕥𝕖𝕕.**"
+USER_BOT_WARN_ZERO = "𝔼𝕟𝕠𝕦𝕘𝕙 𝕆𝕗 𝕐𝕠𝕦𝕣 𝔽𝕝𝕠𝕠𝕕𝕚𝕟𝕘 𝕀𝕟 𝕄𝕪 𝕄𝕒𝕤𝕥𝕖𝕣'𝕤 ℙ𝕄!! \n\n**🚫 𝔹𝕝𝕠𝕔𝕜𝕖𝕕 𝕒𝕟𝕕 ℝ𝕖𝕡𝕠𝕣𝕥𝕖𝕕.**"
 
 alive_txt = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
@@ -87,7 +87,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         result = None
         query = event.text
         auth = await clients_list()
-        if event.query.user_id in auth and query == "UltronBot_help":
+        if event.query.user_id in auth and query == "RomeoBot_help":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             apn = []
@@ -98,17 +98,17 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             if a:
                 help_pic = a.split(" ")[0]
             else:
-                help_pic = "https://telegra.ph/file/193fd25d076d8fa882c58.jpg"
+                help_pic = "https://telegra.ph/file/59b9eba6a5c7801d287d1.jpg"
                 
-                help_msg = f"💥💥 **{hell_mention}**\n\n💥💥ԱӀէɾօղ-φӀմցìղʂ : `{len(CMD_HELP)}` \n💥💥ԱӀէɾօղ-↻ʍժʂ: `{len(apn)}`\n💥💥ԱӀէɾօղ-φąցҽʂ: 1/{veriler[0]}"
+                help_msg = f"💥💥 **{hell_mention}**\n\n💥💥𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ : `{len(CMD_HELP)}` \n💥💥𝕽𝖔𝖒𝖊𝖔-↻ʍժʂ: `{len(apn)}`\n💥💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ: 1/{veriler[0]}"
                 
                 #help_msg = f"╔═══💫✨💫═══\n"
                 #help_msg = f"┃**{hell_mention}**\n"
                 #help_msg = f"╚═══💫✨💫═══\n"
                 #help_msg = f"╔══════✣✤༻⋇༺✤✣══════╗\n"
-                #help_msg = f"┣💥ԱӀէɾօղ-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
-                #help_msg = f"┣💥ԱӀէɾօղ-↻ʍժʂ: `{len(apn)}`\n"
-                #help_msg = f"┣💥ԱӀէɾօղ-φąցҽʂ : 1/{veriler[0]}`\n"
+                #help_msg = f"┣💥𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
+                #help_msg = f"┣💥𝕽𝖔𝖒𝖊𝖔-↻ʍժʂ: `{len(apn)}`\n"
+                #help_msg = f"┣💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ : 1/{veriler[0]}`\n"
                 #help_msg = f"╚══════✣✤༻⋇༺✤✣══════╝\n"""
                 
             if help_pic == "DISABLE":
@@ -129,13 +129,13 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     help_pic,
                     text=help_msg,
-                    title="UltronBot Alive",
+                    title="RomeoBot Alive",
                     buttons=veriler[1],
                     link_preview=False,
                 )
         elif event.query.user_id in auth and query == "alive":
             uptime = await get_time((time.time() - StartTime))
-            alv_msg = gvarstat("ALIVE_MSG") or "»»» <b>ԱӀէɾօղβօէ įʂ ටղƑìɾҽ</b> «««"
+            alv_msg = gvarstat("ALIVE_MSG") or "»»» <b>𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 įʂ ටղƑìɾҽ</b> «««"
             he_ll = alive_txt.format(alv_msg, tel_ver, hell_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{HELL_USER}", f"tg://openmessage?user_id={ForGo10God}")],
@@ -151,7 +151,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/193fd25d076d8fa882c58.jpg4"
+                PIC = "https://telegra.ph/file/59b9eba6a5c7801d287d1.jpg"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     PIC,
@@ -179,8 +179,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
 
         elif event.query.user_id in auth and query == "pm_warn":
-            CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝕋𝕣𝕖𝕤𝕡𝕒𝕤𝕤𝕖𝕕 𝕋𝕠 𝕄𝕪 𝕄𝕒𝕤𝕥𝕖𝕣'𝕤 𝕌𝕝𝕥𝕣𝕠𝕟 ℙ𝕄.!\n𝕋𝕙𝕚𝕤 𝕀𝕤 𝕀𝕝𝕝𝕖𝕘𝕒𝕝 𝔸𝕟𝕕 ℝ𝕖𝕘𝕒𝕣𝕕𝕖𝕕 𝔸𝕤 ℂ𝕣𝕚𝕞𝕖.**"
-            HELL_FIRST = "**🔥 ԱӀէɾօղβօէ ℙ𝕣𝕚𝕧𝕒𝕥𝕖 𝕌𝕝𝕥𝕣𝕠𝕟 ℂ𝕪𝕓𝕖𝕣 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 ℙ𝕣𝕠𝕥𝕠𝕔𝕠𝕝 🔥**\n\ђєɭɭ๏!! 𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕋𝕠 {}'𝕤 𝕌𝕝𝕥𝕣𝕠𝕟 ℙ𝕄. 𝕋𝕙𝕚𝕤 𝕚𝕤 𝕒𝕟 𝕒𝕦𝕥𝕠𝕞𝕒𝕥𝕖𝕕 𝕞𝕖𝕤𝕤𝕒𝕘𝕖.\n\n{}".format(hell_mention, CSTM_PMP)
+            CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝕋𝕣𝕖𝕤𝕡𝕒𝕤𝕤𝕖𝕕 𝕋𝕠 𝕄𝕪 𝕄𝕒𝕤𝕥𝕖𝕣'𝕤 ℙ𝕄.!\n𝕋𝕙𝕚𝕤 𝕀𝕤 𝕀𝕝𝕝𝕖𝕘𝕒𝕝 𝔸𝕟𝕕 ℝ𝕖𝕘𝕒𝕣𝕕𝕖𝕕 𝔸𝕤 ℂ𝕣𝕚𝕞𝕖.**"
+            HELL_FIRST = "**🔥 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ℙ𝕣𝕚𝕧𝕒𝕥𝕖 ℂ𝕪𝕓𝕖𝕣 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 ℙ𝕣𝕠𝕥𝕠𝕔𝕠𝕝 🔥**\n\ђєɭɭ๏!! 𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕋𝕠 {}'𝕤 ℙ𝕄. 𝕋𝕙𝕚𝕤 𝕚𝕤 𝕒𝕟 𝕒𝕦𝕥𝕠𝕞𝕒𝕥𝕖𝕕 𝕞𝕖𝕤𝕤𝕒𝕘𝕖.\n\n{}".format(hell_mention, CSTM_PMP)
             a = gvarstat("PMPERMIT_PIC")
             pic_list = []
             if a:
@@ -190,7 +190,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/193fd25d076d8fa882c58.jpg"
+                PIC = "https://telegra.ph/file/59b9eba6a5c7801d287d1.jpg"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     file=PIC,
@@ -208,7 +208,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     text=HELL_FIRST,
                     title="𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 ℙ𝕄 ℙ𝕖𝕣𝕞𝕚𝕥.",
                     buttons=[
-                        [custom.Button.inline("📝 𝕌𝕝𝕥𝕣𝕠𝕟 ℝ𝕖𝕢𝕦𝕖𝕤𝕥 𝔸𝕡𝕡𝕣𝕠𝕧𝕒𝕝", data="req")],
+                        [custom.Button.inline("📝 ℝ𝕖𝕢𝕦𝕖𝕤𝕥 𝔸𝕡𝕡𝕣𝕠𝕧𝕒𝕝", data="req")],
                         [custom.Button.inline("🚫 𝔹𝕝𝕠𝕔𝕜", data="heheboi")],
                         [custom.Button.inline("❓ ℂ𝕦𝕣𝕚𝕠𝕦𝕤.", data="pmclick")],
                     ],
@@ -217,9 +217,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             else:
                 result = builder.article(
                     text=HELL_FIRST,
-                    title="𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 ℙ𝕄 ℙ𝕖𝕣𝕞𝕚𝕥.",
+                    title="ℙ𝕄 ℙ𝕖𝕣𝕞𝕚𝕥.",
                     buttons=[
-                        [custom.Button.inline("📝 𝕌𝕝𝕥𝕣𝕠𝕟 ℝ𝕖𝕢𝕦𝕖𝕤𝕥 𝔸𝕡𝕡𝕣𝕠𝕧𝕒𝕝", data="req")],
+                        [custom.Button.inline("📝 ℝ𝕖𝕢𝕦𝕖𝕤𝕥 𝔸𝕡𝕡𝕣𝕠𝕧𝕒𝕝", data="req")],
                         [custom.Button.inline("🚫 𝔹𝕝𝕠𝕔𝕜", data="heheboi")],
                         [custom.Button.inline("❓ ℂ𝕦𝕣𝕚𝕠𝕦𝕤.", data="pmclick")],
                     ],
@@ -229,10 +229,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ Ꝉҽցҽղժąɾվ ȺƑ ԱӀէɾօղβօէ⚡**",
+                text=f"**⚡ Ꝉҽցҽղժąɾվ ȺƑ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙⚡**",
                 buttons=[
-                    [Button.url("💥 ԱӀէɾօղ ɾҽքօʂ 💥", "https://github.com/LEGENDXTHANOS/ULTRONBOT")],
-                    [Button.url("💥ԱӀէɾօղβօէ ហҽէաօɾҟ💥", "https://t.me/UltronBot_OP")],
+                    [Button.url("💥 𝕽𝖔𝖒𝖊𝖔 ɾҽքօʂ 💥", "https://github.com/ROMEORJATM/ROMEOBOT")],
+                    [Button.url("💥𝕽𝖔𝖒𝖊𝖔 ហҽէաօɾҟ💥", "https://t.me/Bot_Updates_Chnl")],
                 ],
             )
 
@@ -247,16 +247,16 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
         else:
             result = builder.article(
-                "@UltronBot_XD",
-                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [ԱӀէɾօղβօէ](https://t.me/UltronBot_XD) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
+                "@Bot_Support_Grp",
+                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙](https://t.me/Bot_Support_Grp) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 ԱӀէɾօղ ↻հąղղҽӀ 🔥", "https://t.me/UltronBot_OP"),
-                        custom.Button.url("⚡ ԱӀէɾօղ Ɠɾօմք ⚡", "https://t.me/UltronBot_XD"),
+                        custom.Button.url("🔥 𝕽𝖔𝖒𝖊𝖔 ↻հąղղҽӀ 🔥", "https://t.me/Bot_Updates_Chnl"),
+                        custom.Button.url("⚡ 𝕽𝖔𝖒𝖊𝖔 Ɠɾօմք ⚡", "https://t.me/Bot_Support_Grp"),
                     ],
                     [
-                        custom.Button.url("✨ ԱӀէɾօղ ɾҽքօʂ ✨", "https://github.com/LEGENDXTHANOS/ULTRONBOT"),
-                        custom.Button.url("🔰 ԱӀէɾօղ ɾҽքӀʂ 🔰", "https://replit.com/@LEGEND-LX/PYTHONBOT-4"),
+                        custom.Button.url("✨ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ɾҽքօʂ ✨", "https://github.com/ROMEORJATM/ROMEOBOT"),
+                        custom.Button.url("🔰 𝕽𝖔𝖒𝖊𝖔 ɾҽքӀʂ 🔰", "https://t.me/Rjssgbot"),
                     ],
                 ],
                 link_preview=False,
@@ -270,7 +270,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         if event.query.user_id in auth:
             reply_pop_up_alert = "This is for Other Users..."
         else:
-            reply_pop_up_alert = "🔰 𝕋𝕙𝕚𝕤 𝕚𝕤 𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 ℙ𝕄 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 𝕥𝕠 𝕜𝕖𝕖𝕡 𝕒𝕨𝕒𝕪 𝕦𝕟𝕨𝕒𝕟𝕥𝕖𝕕 𝕣𝕖𝕥𝕒𝕣𝕕𝕤 𝕗𝕣𝕠𝕞 𝕤𝕡𝕒𝕞𝕞𝕚𝕟𝕘 ℙ𝕄 !!"
+            reply_pop_up_alert = "🔰 𝕋𝕙𝕚𝕤 𝕚𝕤 ℙ𝕄 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 𝕥𝕠 𝕜𝕖𝕖𝕡 𝕒𝕨𝕒𝕪 𝕦𝕟𝕨𝕒𝕟𝕥𝕖𝕕 𝕣𝕖𝕥𝕒𝕣𝕕𝕤 𝕗𝕣𝕠𝕞 𝕤𝕡𝕒𝕞𝕞𝕚𝕟𝕘 ℙ𝕄 !!"
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
@@ -286,7 +286,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             first_name = html.escape(target.user.first_name)
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            await tbot.send_message(LOG_GP, f"#ULTRON_REQUEST \n\n⚜️ 𝕐𝕠𝕦 𝕘𝕠𝕥 𝕒 𝕌𝕃𝕋ℝ𝕆ℕ 𝕣𝕖𝕢𝕦𝕖𝕤𝕥 𝕗𝕣𝕠𝕞 [{first_name}](tg://user?id={event.query.user_id}) !")
+            await tbot.send_message(LOG_GP, f"#ROMEO_REQUEST \n\n⚜️ 𝕐𝕠𝕦 𝕘𝕠𝕥 𝕒 𝕽𝖔𝖒𝖊𝖔 𝕣𝕖𝕢𝕦𝕖𝕤𝕥 𝕗𝕣𝕠𝕞 [{first_name}](tg://user?id={event.query.user_id}) !")
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
@@ -319,22 +319,22 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 for y in x:
                     apn.append(y)
             await event.edit(
-                         f"💥💥 **{hell_mention}**\n\n💥💥 ԱӀէɾօղ-φӀմցìղʂ𝖗 : `{len(CMD_HELP)}` \n💥💥ԱӀէɾօղ-↻ʍժ : `{len(apn)}`\n💥💥ԱӀէɾօղ-φąցҽʂ: 1/{veriler[0]}",
+                         f"💥💥 **{hell_mention}**\n\n💥💥 𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ𝖗 : `{len(CMD_HELP)}` \n💥💥𝕽𝖔𝖒𝖊𝖔-↻ʍժ : `{len(apn)}`\n💥💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ: 1/{veriler[0]}",
                 
                            #f"╔═══💫✨💫═══\n"
                            #f"┃**{hell_mention}**\n"
                            #f"╚═══💫✨💫═══\n"
                            #f"╔══════✣✤༻⋇༺✤✣══════╗\n"
-                           #f"┣💥ԱӀէɾօղ-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
-                           #f"┣💥ԱӀէɾօղ-↻ʍժʂ: `{len(apn)}`\n"
-                           #f"┣💥ԱӀէɾօղ-φąցҽʂ : 1/{veriler[0]}`\n"
+                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
+                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-↻ʍժʂ: `{len(apn)}`\n"
+                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ : 1/{veriler[0]}`\n"
                            #f"╚══════✣✤༻⋇༺✤✣══════╝\n","""
                            
                 buttons=simp[1],
                 link_preview=False,
             )
         else:
-            reply_pop_up_alert = "𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© ԱӀէɾօղβօէ ™"
+            reply_pop_up_alert = "𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         
 
@@ -345,14 +345,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         auth = await clients_list()
         if event.query.user_id in auth:
             veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
-            await event.edit(f"**💥💥𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕💥💥**\n\n**𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 𝕆𝕗:**  {hell_mention}\n\n        [©️ԱӀէɾօղβօէ™️]({chnl_link})", buttons=veriler, link_preview=False)   
+            await event.edit(f"**💥💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕💥💥**\n\n**𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕆𝕗:**  {hell_mention}\n\n        [©️𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙™️]({chnl_link})", buttons=veriler, link_preview=False)   
                                 #f"╔═══💫✨💫═══\n"
-                                #f"┃**⚜️ 𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕 ⚜️**\n"
-                                #f"┃**𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 𝕆𝕗 :**  {hell_mention}\n"  
+                                #f"┃**⚜️ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕 ⚜️**\n"
+                                #f"┃**𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕆𝕗 :**  {hell_mention}\n"  
                                 #f"╚═══💫✨💫═══\n"
                                 #[©️ ԱӀէɾօղβօէ ™️]({chnl_link})", buttons=veriler, link_preview=False)"
         else:
-            reply_pop_up_alert = "𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© ԱӀէɾօղβօէ ™"
+            reply_pop_up_alert = "𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
    
 
@@ -369,20 +369,20 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 apn.append(y)
         if event.query.user_id in auth:
             await event.edit(
-                           f"💥💥 **{hell_mention}**\n\n💥💥 ԱӀէɾօղ-φӀմցìղʂ𝖗 : `{len(CMD_HELP)}` \n💥💥ԱӀէɾօղ-↻ʍժ : `{len(apn)}`\n💥💥ԱӀէɾօղ-φąցҽʂ: 1/{veriler[0]}",
+                           f"💥💥 **{hell_mention}**\n\n💥💥 𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ𝖗 : `{len(CMD_HELP)}` \n💥💥𝕽𝖔𝖒𝖊𝖔-↻ʍժ : `{len(apn)}`\n💥💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ: 1/{veriler[0]}",
                            #f"╔═══💫✨💫═══\n"
                            #f"┃**{hell_mention}**\n"
                            #f"╚═══💫✨💫═══\n"
                            #f"╔══════✣✤༻⋇༺✤✣══════╗\n"
-                           #f"┣💥ԱӀէɾօղ-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
-                           #f"┣💥ԱӀէɾօղ-↻ʍժʂ: `{len(apn)}`\n"
-                           #f"┣💥ԱӀէɾօղ-φąցҽʂ : 1/{veriler[0]}`\n"
+                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
+                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-↻ʍժʂ: `{len(apn)}`\n"
+                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ : 1/{veriler[0]}`\n"
                            #f"╚══════✣✤༻⋇༺✤✣══════╝\n","""
                 buttons=veriler[1],
                 link_preview=False,
             )
         else:
-            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© ԱӀէɾօղβօէ ™", cache_time=0, alert=True)
+            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™", cache_time=0, alert=True)
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)")))
@@ -409,7 +409,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         else:
-            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© ԱӀէɾօղβօէ ™", cache_time=0, alert=True)
+            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™", cache_time=0, alert=True)
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"commands\[(.*)\[(\d*)\]\]\((.*)\)")))
@@ -453,7 +453,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         else:
-            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© ԱӀէɾօղβօէ ™", cache_time=0, alert=True)
+            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™", cache_time=0, alert=True)
 
 
-# UltronBot
+# RomeoBot
