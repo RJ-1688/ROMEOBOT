@@ -18,7 +18,7 @@ async def kk(event):
         reply_to_id = event.reply_to_msg_id
     cids = await client_id(event)
     ForGo10God, HELL_USER, hell_mention = cids[0], cids[1], cids[2]
-    cmd = "ls UltronBot/plugins"
+    cmd = "ls RomeoBot/plugins"
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
@@ -27,16 +27,16 @@ async def kk(event):
     _o = o.split("\n")
     o = "\n".join(_o)
     OUTPUT = f"""
-<h1>List of Plugins in ԱӀէɾօղβօէ :</h1>
+<h1>List of Plugins in 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 :</h1>
 
 <code>{o}</code>
 
 <b><i>HELP:</b></i> <i>If you want to know the commands for a plugin, do “ .plinfo <plugin name> ”
 
-<b><a href='https://t.me/UltronBot_XD'>@UltronBot_XD</a></b>
+<b><a href='https://t.me/Bot_Support_Grp'>@Bot_Support_Grp</a></b>
 """
-    hell = await telegraph_paste("All available plugins in ԱӀէɾօղβօէ Ɠɾօմք", OUTPUT)
-    await eor(event, f"[All available plugins in ԱӀէɾօղβօէ]({hell})", link_preview=False)
+    hell = await telegraph_paste("All available plugins in 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 Ɠɾօմք", OUTPUT)
+    await eor(event, f"[All available plugins in 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙]({hell})", link_preview=False)
 
 
 @hell_cmd(pattern="send ([\s\S]*)")
@@ -46,8 +46,8 @@ async def send(event):
     message_id = event.reply_to_msg_id or event.message.id
     thumb = hell_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ ԱӀէɾօղβօէ ]({chnl_link})** ⚡"
-    the_plugin_file = "./UltronBot/plugins/{}.py".format(input_str.lower())
+    omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ]({chnl_link})** ⚡"
+    the_plugin_file = "./RomeoBot/plugins/{}.py".format(input_str.lower())
     if os.path.exists(the_plugin_file):
         await event.client.send_file(
             event.chat_id,
@@ -74,7 +74,7 @@ async def install(event):
         try:
             downloaded_file_name = await event.client.download_media(  # pylint:disable=E0602
                 await event.get_reply_message(),
-                "./UltronBot/plugins/"  # pylint:disable=E0602
+                "./RomeoBot/plugins/"  # pylint:disable=E0602
             )
             if owo != "-f":
                 op = open(downloaded_file_name, "r")
@@ -103,7 +103,7 @@ async def install(event):
                             a = "__Installing...__"
                             b = 1
                         await hell.edit(a)
-                    return await hell.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {hell_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt]({chnl_link})** ⚡", link_preview=False)
+                    return await hell.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {hell_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙]({chnl_link})** ⚡", link_preview=False)
                 return await hell.edit(f"Installed module `{os.path.basename(downloaded_file_name)}`")
             else:
                 os.remove(downloaded_file_name)
@@ -119,7 +119,7 @@ async def uninstall(event):
     if ".py" in shortname:
         shortname = shortname.replace(".py", "")
     hell = await eor(event, f"__Trying to uninstall plugin__ `{shortname}` ...")
-    dir_path =f"./UltronBot/plugins/{shortname}.py"
+    dir_path =f"./RomeoBot/plugins/{shortname}.py"
     try:
         remove_plugin(shortname)
         os.remove(dir_path)
