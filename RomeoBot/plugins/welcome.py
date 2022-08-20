@@ -1,7 +1,7 @@
 from telethon import events
 
-from UltronBot.sql.welcome_sql import get_current_welcome, add_welcome, rm_welcome, update_welcome
-from UltronBot.sql.gvar_sql import gvarstat, addgvar, delgvar
+from RomeoBot.sql.welcome_sql import get_current_welcome, add_welcome, rm_welcome, update_welcome
+from RomeoBot.sql.gvar_sql import gvarstat, addgvar, delgvar
 from . import *
 
 
