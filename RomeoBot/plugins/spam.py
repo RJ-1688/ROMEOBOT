@@ -26,13 +26,13 @@ async def spammer(event):
 async def bigspam(event):
     lg_id = Config.LOGGER_ID
     msg_ = event.text[9:]
-    UltronBot_count = int(msg_.split(" ")[0])
+    RomeoBot_count = int(msg_.split(" ")[0])
     reply_msg = await event.get_reply_message()
     if reply_msg:
         hell_spam = reply_msg
     else:
-        hell_spam = msg_.replace(str(UltronBot_count), "")
-    for i in range(UltronBot_count):
+        hell_spam = msg_.replace(str(RomeoBot_count), "")
+    for i in range(RomeoBot_count):
         await event.client.send_message(event.chat_id, hell_spam, reply_to=reply_msg)
     await event.delete()
     await event.client.send_message(lg_id, f"#BIGSPAM \n\nBigspammed  `{hell_count}`  messages !!")
@@ -67,7 +67,7 @@ async def _(event):
         await event.client.send_message(event.chat_id, input_str)
 
 
-# Special Break Spam Module For UltronBot Made By Chirag Bhargava.
+# Special Break Spam Module For RomeoBot Made By Chirag Bhargava.
 # Team UltronBot
 @hell_cmd(pattern="bspam(?:\s|$)([\s\S]*)")
 async def spammer(event):
