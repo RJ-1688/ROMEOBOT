@@ -2,15 +2,15 @@ from telethon import Button
 from telethon.tl import functions
 from telethon.tl.types import ChatAdminRights
 
-from UltronBot import LOGS
-from UltronBot.config import Config
-from UltronBot.helpers.int_str import make_int
-from UltronBot.sql.gvar_sql import addgvar, gvarstat
+from RomeoBot import LOGS
+from RomeoBot.config import Config
+from RomeoBot.helpers.int_str import make_int
+from RomeoBot.sql.gvar_sql import addgvar, gvarstat
 
 
 # Creates the logger group on first deploy and adds the helper bot
 async def logger_id(client):
-    desc = "A Bot Logger Group For UltronBot. DO NOT LEAVE THIS GROUP!!"
+    desc = "A Bot Logger Group For RomeoBot. DO NOT LEAVE THIS GROUP!!"
     new_rights = ChatAdminRights(
         add_admins=True,
         invite_users=True,
@@ -63,24 +63,24 @@ async def start_msg(client, pic, version, total):
 <b><i>Clients :</b></i> <code>{str(total)}</code>
 <b><i>Sudo :</b></i> <code>{is_sudo}</code>
 
-<b><i>»» <u><a href='https://t.me/UltronBot_XD'>💥ԱӀէɾօղβօէ💥</a></u> ««</i></b>
+<b><i>»» <u><a href='https://t.me/Bot_Support_Grp'>💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥</a></u> ««</i></b>
 """
     await client.send_file(
         Config.LOGGER_ID,
         pic,
         caption=text,
         parse_mode="HTML",
-        buttons=[[Button.url("💥ԱӀէɾօղβօէ💥", "https://t.me/UltronBot_XD")]],
+        buttons=[[Button.url("💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥", "https://t.me/Bot_Support_Grp")]],
     )
 
 
-# Joins the UltronBot chat and channel from all clients
+# Joins the RomeoBot chat and channel from all clients
 async def join_it(client):
     if client:
         try:
-            await client(functions.channels.JoinChannelRequest("@UltronBot_XD"))
-            await client(functions.channels.JoinChannelRequest("@UltronBot_OP"))
+            await client(functions.channels.JoinChannelRequest("@Bot_Support_Grp"))
+            await client(functions.channels.JoinChannelRequest("@Bot_Updates_Chnl"))
         except BaseException:
             pass
 
-# UltronBot
+# RomeoBot
