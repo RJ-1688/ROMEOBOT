@@ -12,22 +12,22 @@ from . import *
 
 ALIVE_TEMP = """
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┣<b><i>🔥🔥ԱӀէɾօղβօէ įʂ ටղƑìɾҽ🔥🔥</b></i>
-┣<i><b>--ԱӀէɾօղ Աʂҽɾ--</i></b> : 『 <a href='tg://user?id={}'>{}</a> 』
+┣<b><i>🔥🔥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 įʂ ටղƑìɾҽ🔥🔥</b></i>
+┣<i><b>--𝕽𝖔𝖒𝖊𝖔 Աʂҽɾ--</i></b> : 『 <a href='tg://user?id={}'>{}</a> 』
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ╔════✣✤༻⋇༺✤✣════╗
 ┣─ <b>♦️ ͲҽӀҽէհօղ ┣</b> <i>{}</i>
-┣─ <b>♦️ ԱӀէɾօղβօէ ┣</b> <i>{}</i>
+┣─ <b>♦️ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ┣</b> <i>{}</i>
 ┣─ <b>♦️ ʂմժօ ┣</b> <i>{}</i>
 ┣─ <b>♦️βօէ Աքէìʍҽ ┣</b> <i>{}</i>
 ┣─ <b>♦️βօէ φìղց ┣</b> <i>{}</i>
 ╚════✣✤༻⋇༺✤✣════╝
 ╔══════════✣✤༻⋇༺✤✣════════╗
-┣<b><i>. <a href='https://t.me/LegendHacker_IIN'>[🅻🅴🅶🅴🅽🅳🅷🅰🅲🅺🅴🆁]</a> .</i></b>
-┣<b><i>. <a href='https://t.me/LegendHacker_IIN'>[🆃🅷🅰🅽🅾🆂🅱🅾🆈]</a> .</i></b>
+┣<b><i>. <a href='https://t.me/Romeoooraj143'>[ROMEORJ]</a> .</i></b>
+┣<b><i>. <a href='https://t.me/Romeoooraj143'>[ROMEORJ]</a> .</i></b>
 ╚══════════✣✤༻⋇༺✤✣════════╝
-┏━━━━━(φօաҽɾƑմӀӀ=ԱӀէɾօղβօէ)━━━━━┓
-┣─<b><i>💥💥💥 <a href='https://t.me/UltronBot_XD'>[♦️ටղƑìɾҽ-ԱӀէɾօղβօէ♦️]</a> 💥💥💥</i></b>
+┏━━━━━(φօաҽɾƑմӀӀ=𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙)━━━━━┓
+┣─<b><i>💥💥💥 <a href='https://t.me/UltronBot_XD'>[♦️ටղƑìɾҽ-𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙♦️]</a> 💥💥💥</i></b>
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 """
 
@@ -46,7 +46,7 @@ async def up(event):
     cid = await client_id(event)
     ForGo10God, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
     start = datetime.datetime.now()
-    hell = await eor(event, "`ԱӀէɾօղβօէ įʂ ටղƑìɾҽ....`")
+    hell = await eor(event, "`𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 įʂ ටղƑìɾҽ....`")
     uptime = await get_time((time.time() - StartTime))
     a = gvarstat("ALIVE_PIC")
     pic_list = []
@@ -57,7 +57,7 @@ async def up(event):
                 pic_list.append(c)
         PIC = random.choice(pic_list)
     else:
-        PIC = "https://telegra.ph/file/eaad0c60c09f04bdb2024.jpg"
+        PIC = "https://telegra.ph/file/59b9eba6a5c7801d287d1.jpg"
     end = datetime.datetime.now()
     ling = (end - start).microseconds / 1000
     omk = ALIVE_TEMP.format(ForGo10God, HELL_USER, tel_ver, hell_ver, is_sudo, uptime, ling)
@@ -66,12 +66,12 @@ async def up(event):
 
 
 
-@hell_cmd(pattern="ultron$")
+@hell_cmd(pattern="romeo$")
 async def hell_a(event):
     cid = await client_id(event)
     ForGo10God, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
     uptime = await get_time((time.time() - StartTime))
-    am = gvarstat("ALIVE_MSG") or "<b>🔥🔥ԱӀէɾօղβօէ įʂ ටղƑìɾҽ🔥🔥</b>"
+    am = gvarstat("ALIVE_MSG") or "<b>🔥🔥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 įʂ ටղƑìɾҽ🔥🔥</b>"
     try:
         hell = await event.client.inline_query(Config.BOT_USERNAME, "alive")
         await hell[0].click(event.chat_id)
