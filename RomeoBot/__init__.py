@@ -6,8 +6,8 @@ import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
-from UltronBot.clients.session import H2, H3, H4, H5, Hell, UltronBot
-from UltronBot.config import Config
+from RomeoBot.clients.session import H2, H3, H4, H5, Hell, RomeoBot
+from RomeoBot.config import Config
 
 
 StartTime = time.time()
@@ -27,7 +27,7 @@ else:
 LOGS = getLogger(__name__)
 
 bot = Hell
-tbot = UltronBot
+tbot = RomeoBot
 
 
 if not Config.API_HASH:
@@ -55,7 +55,7 @@ if not Config.DB_URI:
     quit(1)
 
 
-if not Config.ULTRONBOT_SESSION:
+if not Config.ROMEOBOT_SESSION:
     LOGS.warning("Please fill var ULTRONBOT_SESSION to continue.")
     quit(1)
 
@@ -87,4 +87,4 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-# UltronBot
+# RomeoBot
