@@ -16,10 +16,10 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from UltronBot import *
-from UltronBot.config import Config
-from UltronBot.helpers import *
-from UltronBot.utils import *
+from RomeoBot import *
+from RomeoBot.config import Config
+from RomeoBot.helpers import *
+from RomeoBot.utils import *
 
 async def reply_id(event):
     reply_to_id = None
