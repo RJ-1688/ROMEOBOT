@@ -1,7 +1,7 @@
 # EDIT THIS FILE AND RENAME TO config.py TO MAKE THIS BOT WORKING
 # FILL THESE VALUES ACCORDINGLY.
 
-from UltronBot.config.hell_config import Config
+from RomeoBot.config.hell_config import Config
 
 class Development(Config):
   # get these values from my.telegram.org. 
@@ -16,7 +16,7 @@ class Development(Config):
   # Do `python string.py` and fill the on screen prompts.
   # String session will be saved in your saved message of telegram.
   # Put that string here.
-  ULTRONBOT_SESSION = "Your value"
+  ROMEOBOT_SESSION = "Your value"
 
   # Create a bot in @BotFather
   # And fill the following values with bot token and username.
