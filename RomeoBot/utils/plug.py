@@ -16,17 +16,17 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator, InputMessagesFilterDocument
 
-from UltronBot import *
-from UltronBot.clients import *
-from UltronBot.helpers import *
-from UltronBot.config import *
-from UltronBot.utils import *
+from RomeoBot import *
+from RomeoBot.clients import *
+from RomeoBot.helpers import *
+from RomeoBot.config import *
+from RomeoBot.utils import *
 
 
 # ENV
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from UltronBot.config import Config
+    from RomeoBot.config import Config
 else:
     if os.path.exists("Config.py"):
         from Config import Development as Config
@@ -37,19 +37,19 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import UltronBot.utils
+        import RomeoBot.utils
 
-        path = Path(f"UltronBot/plugins/{shortname}.py")
-        name = "UltronBot.plugins.{}".format(shortname)
+        path = Path(f"RomeoBot/plugins/{shortname}.py")
+        name = "RomeoBot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("UltronBot - Successfully imported " + shortname)
+        LOGS.info("RomeoBot - Successfully imported " + shortname)
     else:
-        import UltronBot.utils
+        import RomeoBot.utils
 
-        path = Path(f"UltronBot/plugins/{shortname}.py")
-        name = "UltronBot.plugins.{}".format(shortname)
+        path = Path(f"Romeo/plugins/{shortname}.py")
+        name = "Romeo.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = Hell
@@ -59,18 +59,18 @@ def load_module(shortname):
         mod.H4 = H4
         mod.H5 = H5
         mod.Hell = Hell
-        mod.UltronBot = UltronBot
-        mod.tbot = UltronBot
+        mod.RomeoBot = RomeoBot
+        mod.tbot = RomeoBot
         mod.tgbot = bot.tgbot
         mod.command = command
         mod.CmdHelp = CmdHelp
         mod.client_id = client_id
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = UltronBot.utils
+        sys.modules["uniborg.util"] = RomeoBot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.UltronBot = bot
+        mod.RomeoBot = bot
         mod.edit_or_reply = edit_or_reply
         mod.eor = edit_or_reply
         mod.delete_hell = delete_hell
@@ -80,14 +80,14 @@ def load_module(shortname):
         mod.hell_cmd = hell_cmd
         mod.sudo_cmd = sudo_cmd
         # support for other userbots
-        sys.modules["userbot.utils"] = UltronBot.utils
-        sys.modules["userbot"] = UltronBot
+        sys.modules["userbot.utils"] = RomeoBot.utils
+        sys.modules["userbot"] = RomeoBot
         # support for paperplaneextended
-        sys.modules["userbot.events"] = UltronBot
+        sys.modules["userbot.events"] = RomeoBot
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["UltronBot.plugins." + shortname] = mod
-        LOGS.info("💥ԱӀէɾօղβօէ💥 - Successfully Imported " + shortname)
+        sys.modules["RomeoBot.plugins." + shortname] = mod
+        LOGS.info("💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥 - Successfully Imported " + shortname)
 
 
 # remove plugins
@@ -99,7 +99,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"UltronBot.plugins.{shortname}"
+            name = f"RomeoBot.plugins.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -111,18 +111,18 @@ def remove_plugin(shortname):
 
 async def plug_channel(client, channel):
     if channel:
-        LOGS.info("💥ԱӀէɾօղβօէ💥 - PLUGIN CHANNEL DETECTED.")
-        LOGS.info("💥ԱӀէɾօղβօէ💥 - Starting to load extra plugins.")
+        LOGS.info("💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥 - PLUGIN CHANNEL DETECTED.")
+        LOGS.info("💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥 - Starting to load extra plugins.")
         plugs = await client.get_messages(channel, None, filter=InputMessagesFilterDocument)
         total = int(plugs.total)
         for plugins in range(total):
             plug_id = plugs[plugins].id
             plug_name = plugs[plugins].file.name
-            if os.path.exists(f"UltronBot/plugins/{plug_name}"):
+            if os.path.exists(f"RomeoBot/plugins/{plug_name}"):
                 return
             downloaded_file_name = await client.download_media(
                 await client.get_messages(channel, ids=plug_id),
-                "UltronBot/plugins/",
+                "RomeoBot/plugins/",
             )
             path1 = Path(downloaded_file_name)
             shortname = path1.stem
@@ -132,4 +132,4 @@ async def plug_channel(client, channel):
                 LOGS.error(str(e))
 
 
-# UltronBot
+# RomeoBot
