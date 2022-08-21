@@ -1,7 +1,7 @@
 from . import *
 
 
-@hell_cmd(pattern="uff"))
+@hell_cmd(pattern="Uff"))
 async def oho(event):
     if not event.is_reply:
         return await event.edit("Reply to a self distructing pic !.!.!")
@@ -13,6 +13,6 @@ async def oho(event):
     await event.delete()
 
 
-CmdHelp("uff").add_command(
+CmdHelp("Uff").add_command(
     "Uff", "This Command Can save documents"
 ).add_info("uff").add_warning("✅ Harmless Module.").add()
