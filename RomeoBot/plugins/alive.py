@@ -27,14 +27,14 @@ ALIVE_TEMP = """
 ┣<b><i>. <a href='https://t.me/Romeoooraj143'>[ROMEORJ]</a> .</i></b>
 ╚══════════✣✤༻⋇༺✤✣════════╝
 ┏━━━━━(φօաҽɾƑմӀӀ=𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙)━━━━━┓
-┣─<b><i>💥💥💥 <a href='https://t.me/UltronBot_XD'>[♦️ටղƑìɾҽ-𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙♦️]</a> 💥💥💥</i></b>
+┣─<b><i>💥💥💥 <a href='https://t.me/Bot_Support_Grp'>[♦️ටղƑìɾҽ-𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙♦️]</a> 💥💥💥</i></b>
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 """
 
 msg = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
 <b>Telethon ≈</b>  <i>{}</i>
-<b>Ultronẞø† ≈</b>  <i>{}</i>
+<b>Romeoẞø† ≈</b>  <i>{}</i>
 <b>Uptime ≈</b>  <i>{}</i>
 <b>Abuse ≈</b>  <i>{}</i>
 <b>Sudo ≈</b>  <i>{}</i>
@@ -84,7 +84,7 @@ async def hell_a(event):
 CmdHelp("alive").add_command(
   "alive", None, "Shows the Default Alive Message"
 ).add_command(
-  "ultron", None, "Shows Inline Alive Menu with more details."
+  "Romeo", None, "Shows Inline Alive Menu with more details."
 ).add_warning(
   "✅ Harmless Module"
 ).add()
