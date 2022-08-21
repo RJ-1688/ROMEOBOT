@@ -231,7 +231,6 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ 𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭 ⚡**",
                 buttons=[
-                    [Button.url("💥 𝕽𝖔𝖒𝖊𝖔 𝕽𝖊𝖕𝖔𝖘 💥", "https://github.com/ROMEORJATM/ROMEOBOT")],
                     [Button.url("💥𝕽𝖔𝖒𝖊𝖔 💥", "https://t.me/Bot_Updates_Chnl")],
                 ],
             )
@@ -248,15 +247,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@Bot_Support_Grp",
-                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙](https://t.me/Bot_Support_Grp) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
+                text="""**𝐇𝐞𝐲 𝐓𝐡𝐢𝐬 𝐢𝐬 [𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭](https://t.me/Bot_Support_Grp)**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 𝕽𝖔𝖒𝖊𝖔 𝖌𝖗𝖔𝖚𝖕 🔥", "https://t.me/Bot_Updates_Chnl"),
-                        custom.Button.url("⚡ 𝕽𝖔𝖒𝖊𝖔 𝕮𝖍𝖆𝖓𝖓𝖊𝖑 ⚡", "https://t.me/Bot_Support_Grp"),
-                    ],
-                    [
-                        custom.Button.url("✨ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕽𝖊𝖕𝖔✨", "https://github.com/ROMEORJATM/ROMEOBOT"),
-                        custom.Button.url("🔰 𝕽𝖔𝖒𝖊𝖔 𝖘𝖙𝖗𝖎𝖓𝖌 🔰", "https://t.me/Rjssgbot"),
+                        custom.Button.url("🔰 𝐑𝐨𝐦𝐞𝐨_𝐒𝐭𝐫𝐢𝐧𝐠 🔰", "https://t.me/Rjssgbot"),
                     ],
                 ],
                 link_preview=False,
@@ -281,12 +275,12 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
-            await event.edit("✅ **ℝ𝕖𝕢𝕦𝕖𝕤𝕥 ℝ𝕖𝕘𝕚𝕤𝕥𝕖𝕣𝕖** \n\n𝕄𝕪 𝕞𝕒𝕤𝕥𝕖𝕣 𝕨𝕚𝕝𝕝 𝕟𝕠𝕨 𝕕𝕖𝕔𝕚𝕕𝕖 𝕥𝕠 𝕝𝕠𝕠𝕜 𝕗𝕠𝕣 𝕪𝕠𝕦𝕣 𝕣𝕖𝕢𝕦𝕖𝕤𝕥 𝕠𝕣 𝕟𝕠𝕥.\n😐 𝕋𝕚𝕝𝕝 𝕥𝕙𝕖𝕟 𝕨𝕒𝕚𝕥 𝕡𝕒𝕥𝕚𝕖𝕟𝕥𝕝𝕪 𝕒𝕟𝕕 𝕕𝕠𝕟'𝕥 𝕤𝕡𝕒𝕞!!")
+            await event.edit("✅ **𝐑𝐞𝐪𝐮𝐞𝐬𝐭** \n\n𝐎𝐲𝐞 𝐑𝐮𝐤𝐨 𝐣𝐚𝐥𝐝𝐢 𝐤𝐲𝐚 𝐡\n😐 𝐒𝐩𝐚𝐦 𝐧𝐡𝐢 𝐛𝐨𝐥𝐚 𝐧 ")
             target = await event.client(GetFullUserRequest(event.query.user_id))
             first_name = html.escape(target.user.first_name)
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            await tbot.send_message(LOG_GP, f"#ROMEO_REQUEST \n\n⚜️ 𝕐𝕠𝕦 𝕘𝕠𝕥 𝕒 𝕽𝖔𝖒𝖊𝖔 𝕣𝕖𝕢𝕦𝕖𝕤𝕥 𝕗𝕣𝕠𝕞 [{first_name}](tg://user?id={event.query.user_id}) !")
+            await tbot.send_message(LOG_GP, f"#ROMEO_REQUEST \n\n⚜️ 𝐘𝐨𝐮 𝐠𝐨𝐭 𝐚 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 [{first_name}](tg://user?id={event.query.user_id}) !")
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
@@ -302,7 +296,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             first_name = html.escape(target.user.first_name)
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            await tbot.send_message(LOG_GP, f"#BETA_CHOD_GYA_TUTO_BLOCK \n\n**𝐁𝐥𝐨𝐜𝐤** [{first_name}](tg://user?id={event.query.user_id}) \nℝ𝕖𝕒𝕤𝕠𝕟:- ℙ𝕄 𝕊𝕖𝕝𝕗 𝔹𝕝𝕠𝕔𝕜")
+            await tbot.send_message(LOG_GP, f"𝐇𝐨 𝐠𝐲𝐚 𝐧 𝐁𝐥𝐨𝐜𝐤 𝐛𝐨𝐥𝐚 𝐭𝐡𝐚 𝐬𝐩𝐚𝐦 𝐦𝐚𝐚𝐭 𝐤𝐚𝐫\n\n**𝐁𝐥𝐨𝐜𝐤** [{first_name}](tg://user?id={event.query.user_id}) \nℝ𝕖𝕒𝕤𝕠𝕟:- ℙ𝕄 𝕊𝕖𝕝𝕗 𝔹𝕝𝕠𝕔𝕜")
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"reopen")))
@@ -334,7 +328,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         else:
-            reply_pop_up_alert = "𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™"
+            reply_pop_up_alert = "𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐬𝐞𝐝 𝐭𝐨 𝐮𝐬𝐞 𝐦𝐞"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         
 
@@ -345,10 +339,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         auth = await clients_list()
         if event.query.user_id in auth:
             veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
-            await event.edit(f"**💥💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕💥💥**\n\n**𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕆𝕗:**  {hell_mention}\n\n        [©️𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙™️]({chnl_link})", buttons=veriler, link_preview=False)   
+            await event.edit(f"**🌹 𝐁𝐨𝐭 𝐦𝐞𝐧𝐮 𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐫 𝐧𝐨𝐰 𝐜𝐥𝐨𝐬𝐞𝐝 🌹**\n\n**𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 :**  {hell_mention}\n\n        [©️𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™️]({chnl_link})", buttons=veriler, link_preview=False)   
                                 #f"╔═══💫✨💫═══\n"
-                                #f"┃**⚜️ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕 ⚜️**\n"
-                                #f"┃**𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕆𝕗 :**  {hell_mention}\n"  
+                                #f"┃**🌹 𝐁𝐨𝐭 𝐦𝐞𝐧𝐮 𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐫 𝐧𝐨𝐰 𝐜𝐥𝐨𝐬𝐞𝐝 🌹**\n"
+                                #f"┃**𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 :**  {hell_mention}\n"  
                                 #f"╚═══💫✨💫═══\n"
                                 #[©️ ԱӀէɾօղβօէ ™️]({chnl_link})", buttons=veriler, link_preview=False)"
         else:
