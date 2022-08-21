@@ -1,4 +1,4 @@
-#this plugin maked by Romeo
+#this plugin maked by RomeoRJ 
 #this plugin maked by protected your ID rishabh ai is most advanced cdm to protected your ID for hackers 
 import os
 from ..utils import admin_cmd
