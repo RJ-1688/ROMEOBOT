@@ -23,17 +23,17 @@ NO_HEROKU_APP_CFGD = "No Heroku App Found!"
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
 RESTARTING_APP = "Restarting Heroku App..."
 IS_SELECTED_DIFFERENT_BRANCH = "Looks like a custom branch {branch_name} is being used!\nIn this case, updater is unable to identify the branch to be updated. Please check out to an official branch, and re-start the updater."
-UltronBot_info = "https://raw.githubusercontent.com/The-UltronBot/Plugins/master/UltronBot-info.json"
+RomeoBot_info = "https://raw.githubusercontent.com/ROMEORJATM/ROMEORJUSERBOT/master/RomeoBot-info.json"
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 requirements_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "requirements.txt")
 
 
 async def hell_info(UltronBot_info):
     infos = requests.get(UltronBot_info).json()
-    _version = infos['UltronBot-INFO']['version']
-    _release = infos['UltronBot-INFO']['release-date']
-    _branch = infos['UltronBot-INFO']['branch']
-    _author = infos['UltronBot-INFO']['author']
+    _version = infos['RomeoBot-INFO']['version']
+    _release = infos['RomeoBot-INFO']['release-date']
+    _branch = infos['RomeoBot-INFO']['branch']
+    _author = infos['RomeoBot-INFO']['author']
     _auturl = infos['UltronBot-INFO']['author-url']
     return _version, _release, _branch, _author, _auturl
 
@@ -90,8 +90,8 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await eor(event, "✅ Successfully updated Hêllẞø†!\n\nBot is restarting please wait for a minute.")
-    args = [sys.executable, "-m", "UltronBot"]
+    await eor(event, "✅ Successfully updated RomeoBot!\n\nBot is restarting please wait for a minute.")
+    args = [sys.executable, "-m", "RomeoBot"]
     os.execle(sys.executable, *args, os.environ)
     return
 
@@ -145,20 +145,20 @@ async def upstream(event):
     cid = await client_id(event)
     hell_mention = cid[2]
     if changelog == "" and not force_update:
-        _version, _release, _branch, _author, _auturl = await hell_info(UltronBot_info)
-        output_ = f"**Your Bot Version :** `{hell_ver}` \n**Owner :** {hell_mention} \n\n**Official UltronBot Version :** `{_version}` \n**Release Date :** `{_release}` \n**Official Repo Branch :** `{_branch}` \n**Update By :** [{_author}]({_auturl})"
+        _version, _release, _branch, _author, _auturl = await hell_info(RomeoBot_info)
+        output_ = f"**Your Bot Version :** `{hell_ver}` \n**Owner :** {hell_mention} \n\n**Official RomeoBot Version :** `{_version}` \n**Release Date :** `{_release}` \n**Official Repo Branch :** `{_branch}` \n**Update By :** [{_author}]({_auturl})"
         if str(_version) not in str(hell_ver):
-            output_ += f"\n\n**Do** `{hl}update build` **to update your UltronBot to latest version.**"
+            output_ += f"\n\n**Do** `{hl}update build` **to update your RomeoBot to latest version.**"
         await event.edit(output_)
         return repo.__del__()
     if conf == "" and not force_update:
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
-        return await event.respond(f"🌚 Do `{hl}update build` to update your **Hêllẞø†** !!")
+        return await event.respond(f"🌚 Do `{hl}update build` to update your **RomeoBot** !!")
 
     if force_update:
         await event.edit(
-            "`Force-Updating Hêllẞø†. Please wait...`"
+            "`Force-Updating RomeoBot. Please wait...`"
         )
     if conf == "now":
         await event.edit("`Update In Progress! Please Wait....`")
@@ -186,8 +186,8 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 f"{txt}\n" "`Invalid Heroku vars for updating."
             )
             return repo.__del__()
-        _version, _release, _branch, _author, _auturl = await hell_info(UltronBot_info)
-        await event.edit(f"<b><i>Hêllẞø† Docker Build In Progress !!!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
+        _version, _release, _branch, _author, _auturl = await hell_info(RomeoBot_info)
+        await event.edit(f"<b><i>RomeoBot Docker Build In Progress !!!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
         heroku_git_url = heroku_app.git_url.replace(
@@ -210,7 +210,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             await asyncio.sleep(5)
             return await event.delete()
-        await event.edit(f"**Your Hêllẞø† Is UpToDate**\n\n**Version :**  __{hell_ver}__\n**Oɯɳҽɾ :**  {hell_mention}")
+        await event.edit(f"**Your RomeoBot Is UpToDate**\n\n**Version :**  __{hell_ver}__\n**Oɯɳҽɾ :**  {hell_mention}")
     else:
         await event.edit("**Please set up**  `HEROKU_API_KEY`  **from heroku to update!**")
     return
@@ -219,7 +219,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
 @hell_cmd(pattern="update build$")
 async def upstream(event):
     event = await eor(event, "`Hard-Update In Progress... \nPlease wait until docker build is finished...`")
-    off_repo = "https://github.com/The-UltronBot/UltronBot"
+    off_repo = "https://github.com/ROMEORJATM/ROMEOBOT"
     os.chdir("/app")
     git_hell = f"rm -rf .git"
     try:
@@ -250,7 +250,7 @@ async def upstream(event):
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
     _version, _release, _branch, _author, _auturl = await hell_info(UltronBot_info)
-    await event.edit(f"<b><i>Hêllẞø† Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
+    await event.edit(f"<b><i>RomeoBot Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
     await deploy(event, repo, ups_rem, ac_br, txt)
 
 
