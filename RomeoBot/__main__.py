@@ -76,13 +76,13 @@ async def start_RomeoBot():
         LOGS.info("╚══════════════════❍⊱")
         await plug_load("RomeoBot/plugins/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
-        LOGS.info(f"""『💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝖀𝖘𝖊𝖗𝖇𝖔𝖙💥』➙𖤍࿐ IS ON!!! ROMEO USERBOT VERSION :- 𝕍:𝕒 𝟙.𝟘
+        LOGS.info(f"""🇷 𝐎𝐌𝐄𝐎...➙𖤍࿐ IS ON!!! ROMEO USERBOT VERSION :- 𝕍:𝕒 𝟙.𝟘
                       TYPE :- " .gpromote @Romeoooraj143" OR .help OR .ping CHECK IF I'M ON!
                       ╔════❰ ROMEO USERBOT ❱═❍⊱❁
                       ║┣⪼ OWNER - 𝕾🅡︎🅐︎🅙︎𝕾
                       ║┣⪼ Ultra Real Stick Bot 
                       ║┣⪼ CREATOR -𝕾🅡︎🅐︎🅙︎𝕾
-                      ║┣⪼ TELETHON - 1.2.0
+                      ║┣⪼ TELETHON - 1.0
                       ║┣⪼ ✨ 𝕽𝖔𝖒𝖊𝖔 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 ✨
                       ║╰━━━━━━━━━━━━━━━➣
                       ╚══════════════════❍⊱""")
