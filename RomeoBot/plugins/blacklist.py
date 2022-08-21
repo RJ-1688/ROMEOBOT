@@ -2,7 +2,7 @@ import re
 
 from telethon import events
 
-from UltronBot.sql import blacklist_sql as sq
+from RomeoBot.sql import blacklist_sql as sq
 from . import *
 
 
