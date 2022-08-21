@@ -98,4 +98,4 @@ async def _(event):
 
 CmdHelp("lxlove").add_command(
     "lxlove", None, "Reply to him or her to start mysticxlove"
-).add_command("nofeelings", None, "Reply To her Ya him To stop mysticxlove").add()
+).add()
