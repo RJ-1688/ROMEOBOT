@@ -2,7 +2,7 @@ import os
 
 from telethon.tl.functions.users import GetFullUserRequest
 
-from UltronBot.sql.gvar_sql import addgvar, gvarstat, delgvar
+from RomeoBot.sql.gvar_sql import addgvar, gvarstat, delgvar
 from . import *
 
 
