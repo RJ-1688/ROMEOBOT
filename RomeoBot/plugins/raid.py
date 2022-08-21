@@ -324,7 +324,7 @@ async def _(event):
 que = {}
 
 
-@hell_cmd(pattern="raid")
+@hell_cmd(pattern="raid(?:\s|$)([\s\S]*)")
 async def spam(e):
     if e.fwd_from:
         return
@@ -347,7 +347,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@hell_cmd(pattern="replyraid")
+@hell_cmd(pattern="replyraid(?:\s|$)([\s\S]*)")
 async def _(event):
     global que
     if event.fwd_from:
@@ -378,7 +378,7 @@ async def _(event):
         await event.edit(f"Started Raid")
 
 
-@hell_cmd(pattern="dreplyraid")
+@hell_cmd(pattern="dreplyraid(?:\s|$)([\s\S]*)")
 async def _(event):
     global que
     if event.fwd_from:
