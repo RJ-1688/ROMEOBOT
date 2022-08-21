@@ -311,23 +311,7 @@ RAID = [
 que = {}
 
 
-@hell_cmd(incoming=True))
-async def _(event):
-    global que
-    queue = que.get(event.sender_id)
-    if not queue:
-        return
-    async with event.client.action(event.chat_id, "typing"):
-        await asyncio.sleep(0.3)
-    async with event.client.action(event.chat_id, "typing"):
-        await event.client.send_message(
-            entity=event.chat_id,
-            message="""{}""".format(random.choice(RAID)),
-            reply_to=event.message.id,
-        )
-
-
-@hell_cmd(pattern="raid(?: |$)(.*)"))
+@hell_cmd(pattern="raid")
 async def spam(e):
     if e.fwd_from:
         return
@@ -350,7 +334,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@hell_cmd(pattern="replyraid(?: |$)(.*)"))
+@hell_cmd(pattern="replyraid")
 async def _(event):
     global que
     if event.fwd_from:
@@ -381,7 +365,7 @@ async def _(event):
         await event.edit(f"Started Raid")
 
 
-@hell_cmd(pattern="dreplyraid(?: |$)(.*)"))
+@hell_cmd(pattern="dreplyraid")
 async def _(event):
     global que
     if event.fwd_from:
