@@ -56,7 +56,7 @@ if not Config.DB_URI:
 
 
 if not Config.ROMEOBOT_SESSION:
-    LOGS.warning("Please fill var ULTRONBOT_SESSION to continue.")
+    LOGS.warning("Please fill var ROMEOBOT_SESSION to continue.")
     quit(1)
 
 
