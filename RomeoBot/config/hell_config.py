@@ -43,8 +43,8 @@ class Config(object):
         LOGGER_ID = int(LOGGER_ID)
     MAX_MESSAGE_SIZE_LIMIT = 4095
     MAX_SPAM = int(os.environ.get("MAX_SPAM", 3))
-    MY_CHANNEL = os.environ.get("YOUR_CHANNEL", "Its_UltronBot")
-    MY_GROUP = os.environ.get("YOUR_GROUP", "UltronBot_Chat")
+    MY_CHANNEL = os.environ.get("YOUR_CHANNEL", "Bot_Support_Grp")
+    MY_GROUP = os.environ.get("YOUR_GROUP", "Bot_Updates_Chnl")
     OCR_API = os.environ.get("OCR_API", None)
     PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", None)
     if PLUGIN_CHANNEL:
@@ -54,7 +54,7 @@ class Config(object):
         PM_LOG_ID = int(PM_LOG_ID)
     PM_PERMIT = os.environ.get("PM_PERMIT", None)
     REMOVE_BG_API = os.environ.get("REMOVE_BG_API", None)
-    ROMEOBOT_SESSION = os.environ.get("ULTRONBOT_SESSION", None)
+    ROMEOBOT_SESSION = os.environ.get("ROMEOBOT_SESSION", None)
     SESSION_2 = os.environ.get("SESSION_2", None)
     SESSION_3 = os.environ.get("SESSION_3", None)
     SESSION_4 = os.environ.get("SESSION_4", None)
@@ -66,9 +66,9 @@ class Config(object):
         TAG_LOGGER = int(TAG_LOGGER)
     TEMP_DIR = os.environ.get("TEMP_DIR", None)
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
-    THUMB_IMG = os.environ.get("THUMB_IMG", "./UltronBot/resources/pics/UltronBot_logo.jpg")
+    THUMB_IMG = os.environ.get("THUMB_IMG", "./RomeoBot/resources/pics/hellbot_logo.jpg")
     UNLOAD = list(os.environ.get("UNLOAD", "").split())
-    UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "https://github.com/LEGENDXTHANOS/ULTRONBOT")
+    UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "https://github.com/ROMEORJATM/ROMEOBOT")
     WEATHER_API = os.environ.get("WEATHER_API", None)
 
 
