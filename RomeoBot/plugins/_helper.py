@@ -8,10 +8,7 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInl
 from . import *
 
 msg = f"""
-**⚡ ʟɛɢɛռɖaʀʏ ᴀғ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ⚡**
-  •        [📑 Repo 📑](https://github.comROMEORJATM/ROMEOBOT/)
-  •        [RomeoBot Network](https://t.me/Bot_Updates_Chnl)
-  •  ©️ {hell_channel} ™
+**𝐑𝐨𝐦𝐞𝐨**
 """
 botname = Config.BOT_USERNAME
 
@@ -76,7 +73,7 @@ async def RomeoBot(event):
         ]
 
         for i in sayfa:
-            string += f"`📌 `"
+            string += f"❥︎"
             for sira, a in enumerate(i):
                 string += "`" + str(a)
                 if sira == i.index(i[-1]):
