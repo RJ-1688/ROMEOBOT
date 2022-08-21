@@ -1,7 +1,6 @@
 import asyncio
 import random
 
-from Romeobot import *
 from Romeobot.plugins import *
 
 NUMBER = ["0", "1"]
@@ -391,8 +390,6 @@ async def _(event):
         queue.pop(0)
         await event.edit(f"STOPPING RAID BY {ALIVE_NAME}")
 
-
-from Romeobot.cmdhelp import CmdHelp
 
 CmdHelp("raid").add_command(
     "raid",
