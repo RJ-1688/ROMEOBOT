@@ -71,19 +71,19 @@ async def start_RomeoBot():
         await tbot.start()
         total = C1 + C2 + C3 + C4 + C5
         LOGS.info("╔════{𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙}═❍⊱❁")
-        LOGS.info("║┣⪼ 𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘. 𝕽𝖔𝖒𝖊𝖔 𝕌𝕤𝕖𝕣𝔹𝕠𝕠𝕥")
-        LOGS.info("║┣⪼ 𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘. 𝕃𝕠𝕕𝕚𝕟𝕘...")
+        LOGS.info("║┣⪼ 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠... 𝐑𝐨𝐦𝐫𝐨𝐁𝐨𝐭")
+        LOGS.info("║┣⪼ 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠.. 𝐋𝐨𝐚𝐝𝐢𝐧𝐠..")
         LOGS.info("╚══════════════════❍⊱")
         await plug_load("RomeoBot/plugins/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
-        LOGS.info(f"""『💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 Աʂҽɾβօէ💥』➙𖤍࿐ IS ON!!! 𝕽𝖔𝖒𝖊𝖔 Աʂҽɾβօէ VERSION :- 𝕍:𝕒 𝟙.𝟘
+        LOGS.info(f"""『💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝖀𝖘𝖊𝖗𝖇𝖔𝖙💥』➙𖤍࿐ IS ON!!! ROMEO USERBOT VERSION :- 𝕍:𝕒 𝟙.𝟘
                       TYPE :- " .gpromote @Romeoooraj143" OR .help OR .ping CHECK IF I'M ON!
                       ╔════❰ 𝕽𝖔𝖒𝖊𝖔 Աʂҽɾβօէ ❱═❍⊱❁
-                      ║┣⪼ OWNER - 𝐑𝐨𝐦𝐞𝐨RJ
+                      ║┣⪼ OWNER - 𝕾🅡︎🅐︎🅙︎𝕾
                       ║┣⪼ Ultra Real Stick Bot 
-                      ║┣⪼ CREATOR -@Romeoooraj143
+                      ║┣⪼ CREATOR -𝕾🅡︎🅐︎🅙︎𝕾
                       ║┣⪼ TELETHON - 1.2.0
-                      ║┣⪼ ✨ 『💥𝕽𝖔𝖒𝖊𝖔💥』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+                      ║┣⪼ ✨ 𝕽𝖔𝖒𝖊𝖔 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 ✨
                       ║╰━━━━━━━━━━━━━━━➣
                       ╚══════════════════❍⊱""")
         LOGS.info(f"» Total Clients = {str(total)} «")
