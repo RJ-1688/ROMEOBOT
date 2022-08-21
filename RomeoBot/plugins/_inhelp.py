@@ -35,11 +35,6 @@ USER_BOT_WARN_ZERO = "Oye bsss kar spam nhi block nhi hona h to"
 
 alive_txt = """{}\n
 <b><i>🌹 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🌹</b></i>
-<b>Telethon ≈</b>  <i>{}</i>
-<b>RomeoBot ≈</b>  <i>{}</i>
-<b>Uptime ≈</b>  <i>{}</i>
-<b>Abuse ≈</b>  <i>{}</i>
-<b>Sudo ≈</b>  <i>{}</i>
 """
 
 def button(page, modules):
@@ -64,13 +59,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"✨ 𝐁𝐚𝐜𝐤 🎈", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"🔥 𝐁𝐚𝐜𝐤 💥", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
                f"• ❌ •", data="close"
             ),
             custom.Button.inline(
-               f"🎈 𝐍𝐞𝐱𝐭 ✨", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"💥 𝐍𝐞𝐱𝐭 🔥", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -231,7 +226,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ 𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭 ⚡**",
                 buttons=[
-                    [Button.url("💥𝕽𝖔𝖒𝖊𝖔 💥", "https://t.me/Bot_Updates_Chnl")],
+                    [Button.url("🌹 𝕽𝖔𝖒𝖊𝖔 🌹", "https://t.me/Bot_Updates_Chnl")],
                 ],
             )
 
