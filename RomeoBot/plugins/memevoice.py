@@ -1,6 +1,6 @@
 from . import *
-# Credits to @ForGo10God developer of UltronBot.
-# This is my first plugin that I made when I released first UltronBot.
+# Credits to @Romeoooraj143 developer of RomeoBot.
+# This is my first plugin that I made when I released first RomeoBot.
 # Modified to work in groups with inline mode disabled.
 # Added error msg if no voice is found.
 # So please dont remove credit. 
