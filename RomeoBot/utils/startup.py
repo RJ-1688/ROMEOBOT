@@ -63,14 +63,13 @@ async def start_msg(client, pic, version, total):
 <b><i>Clients :</b></i> <code>{str(total)}</code>
 <b><i>Sudo :</b></i> <code>{is_sudo}</code>
 
-<b><i>»» <u><a href='https://t.me/Bot_Support_Grp'>💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥</a></u> ««</i></b>
+<b><i>🌹 𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭 🌹</i></b>
 """
     await client.send_file(
         Config.LOGGER_ID,
         pic,
         caption=text,
         parse_mode="HTML",
-        buttons=[[Button.url("💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥", "https://t.me/Bot_Support_Grp")]],
     )
 
 
