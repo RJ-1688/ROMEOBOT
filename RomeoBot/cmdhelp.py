@@ -1,6 +1,6 @@
 import os
 
-from userbot import CMD_HELP, CMD_HELP_BOT
+from RomeoBotot import CMD_HELP, CMD_HELP_BOT
 
 from .k import *
 
