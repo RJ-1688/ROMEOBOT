@@ -5,7 +5,7 @@ from telethon.errors import FloodWaitError
 from telethon.tl import functions
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 
-from UltronBot.sql.gvar_sql import addgvar, delgvar, gvarstat
+from RomeoBot.sql.gvar_sql import addgvar, delgvar, gvarstat
 from . import *
 
 DEL_TIME_OUT = 60
