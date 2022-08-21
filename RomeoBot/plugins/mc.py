@@ -1,4 +1,4 @@
-from RomeoBot import hell as LEGEND
+from RomeoBot import bot as LEGEND
 from RomeoBot.cmdhelp import CmdHelp
 
 x = True
