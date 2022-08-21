@@ -93,7 +93,7 @@ async def start_RomeoBot():
         sys.exit()
 
 
-bot.loop.run_until_complete(start_UltronBot())
+bot.loop.run_until_complete(start_RomeoBot())
 
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
