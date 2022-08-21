@@ -57,7 +57,7 @@ async def logger_check(bot):
 async def start_msg(client, pic, version, total):
     is_sudo = "True" if Config.SUDO_USERS else "False"
     text = f"""
-#START
+❥︎ 𝐒𝐓𝐀𝐑𝐓 ☟︎︎︎
 
 <b><i>Version :</b></i> <code>{version}</code>
 <b><i>Clients :</b></i> <code>{str(total)}</code>
