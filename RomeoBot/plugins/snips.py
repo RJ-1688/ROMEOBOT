@@ -1,6 +1,6 @@
 from telethon import events
 
-from UltronBot.sql import snip_sql as sq
+from RomeoBot.sql import snip_sql as sq
 from . import *
 
 
