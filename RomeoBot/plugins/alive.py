@@ -5,7 +5,7 @@ import time
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
-from UltronBot.sql.gvar_sql import gvarstat
+from RomeoBot.sql.gvar_sql import gvarstat
 from . import *
 
 #-------------------------------------------------------------------------------
