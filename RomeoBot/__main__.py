@@ -78,7 +78,7 @@ async def start_RomeoBot():
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
         LOGS.info(f"""『💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝖀𝖘𝖊𝖗𝖇𝖔𝖙💥』➙𖤍࿐ IS ON!!! ROMEO USERBOT VERSION :- 𝕍:𝕒 𝟙.𝟘
                       TYPE :- " .gpromote @Romeoooraj143" OR .help OR .ping CHECK IF I'M ON!
-                      ╔════❰ 𝕽𝖔𝖒𝖊𝖔 Աʂҽɾβօէ ❱═❍⊱❁
+                      ╔════❰ ROMEO USERBOT ❱═❍⊱❁
                       ║┣⪼ OWNER - 𝕾🅡︎🅐︎🅙︎𝕾
                       ║┣⪼ Ultra Real Stick Bot 
                       ║┣⪼ CREATOR -𝕾🅡︎🅐︎🅙︎𝕾
