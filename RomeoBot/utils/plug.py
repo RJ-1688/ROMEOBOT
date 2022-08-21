@@ -87,7 +87,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["RomeoBot.plugins." + shortname] = mod
-        LOGS.info("💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥 - Successfully Imported " + shortname)
+        LOGS.info("🇷 𝐎𝐌𝐄𝐎... - Successfully Imported " + shortname)
 
 
 # remove plugins
@@ -111,8 +111,8 @@ def remove_plugin(shortname):
 
 async def plug_channel(client, channel):
     if channel:
-        LOGS.info("💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥 - PLUGIN CHANNEL DETECTED.")
-        LOGS.info("💥𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙💥 - Starting to load extra plugins.")
+        LOGS.info("🇷 𝐎𝐌𝐄𝐎... - PLUGIN CHANNEL DETECTED.")
+        LOGS.info("🇷 𝐎𝐌𝐄𝐎... - Starting to load extra plugins.")
         plugs = await client.get_messages(channel, None, filter=InputMessagesFilterDocument)
         total = int(plugs.total)
         for plugins in range(total):
