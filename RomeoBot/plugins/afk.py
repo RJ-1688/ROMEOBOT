@@ -65,14 +65,14 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end_1 - afk_start_1))
     current_message = event.message.message
     if "#" not in current_message and gvarstat("AFK") == "YES":
-        UltronBot = await event.client.send_message(
+        RomeoBot = await event.client.send_message(
             event.chat_id,
             "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
             + total_afk_time
             + "`", file=hellpic_1
         )
         try:
-            await unsave_gif(event, UltronBot)
+            await unsave_gif(event, RomeoBot)
             delgvar("AFK")
             await event.client.send_message(
                 Config.LOGGER_ID,
@@ -89,7 +89,7 @@ async def set_not_afk(event):
                 silent=True,
             )
         await asyncio.sleep(5)
-        await UltronBot.delete()
+        await RomeoBot.delete()
         afk_time_1 = None
 
 
@@ -222,7 +222,7 @@ if H2:
                     silent=True,
                 )
             await asyncio.sleep(5)
-            await UltronBot.delete()
+            await RomeoBot.delete()
             afk_time_2 = None
 
 
@@ -355,7 +355,7 @@ if H3:
                     silent=True,
                 )
             await asyncio.sleep(5)
-            await UltronBot.delete()
+            await RomeoBot.delete()
             afk_time_3 = None
 
 
@@ -488,7 +488,7 @@ if H4:
                     silent=True,
                 )
             await asyncio.sleep(5)
-            await UltronBot.delete()
+            await RomeoBot.delete()
             afk_time_4 = None
 
 
@@ -621,7 +621,7 @@ if H5:
                     silent=True,
                 )
             await asyncio.sleep(5)
-            await UltronBot.delete()
+            await RomeoBot.delete()
             afk_time_5 = None
 
 
