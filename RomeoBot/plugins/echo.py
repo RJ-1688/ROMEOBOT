@@ -5,8 +5,8 @@ import requests
 from telethon import events
 from telethon.utils import get_peer_id
 
-from UltronBot.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
-from UltronBot.sql.gvar_sql import addgvar, gvarstat, delgvar
+from RomeoBot.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
+from RomeoBot.sql.gvar_sql import addgvar, gvarstat, delgvar
 from . import *
 
 
