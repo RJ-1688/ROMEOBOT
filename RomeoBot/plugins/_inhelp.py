@@ -352,7 +352,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                                 #f"╚═══💫✨💫═══\n"
                                 #[©️ ԱӀէɾօղβօէ ™️]({chnl_link})", buttons=veriler, link_preview=False)"
         else:
-            reply_pop_up_alert = "𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™"
+            reply_pop_up_alert = "𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐬𝐞𝐝 𝐭𝐨 𝐮𝐬𝐞 𝐦𝐞"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
    
 
@@ -369,20 +369,20 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 apn.append(y)
         if event.query.user_id in auth:
             await event.edit(
-                           f"💥💥 **{hell_mention}**\n\n💥💥 𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ𝖗 : `{len(CMD_HELP)}` \n💥💥𝕽𝖔𝖒𝖊𝖔-↻ʍժ : `{len(apn)}`\n💥💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ: 1/{veriler[0]}",
+                           f"🌹 **{hell_mention}**\n\n🌹𝐏𝐥𝐮𝐠𝐢𝐧𝐬: `{len(CMD_HELP)}` \n🌹𝐂𝐦𝐝𝐬: `{len(apn)}`\n🌹𝐏𝐚𝐠𝐞: 1/{veriler[0]}",
                            #f"╔═══💫✨💫═══\n"
                            #f"┃**{hell_mention}**\n"
                            #f"╚═══💫✨💫═══\n"
                            #f"╔══════✣✤༻⋇༺✤✣══════╗\n"
-                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
-                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-↻ʍժʂ: `{len(apn)}`\n"
-                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ : 1/{veriler[0]}`\n"
+                           #f"┣🌹𝐏𝐥𝐮𝐠𝐢𝐧𝐬: `{len(CMD_HELP)}` \n"
+                           #f"┣🌹𝐂𝐦𝐝𝐬: `{len(apn)}`\n"
+                           #f"┣🌹𝐏𝐚𝐠𝐞: 1/{veriler[0]}`\n"
                            #f"╚══════✣✤༻⋇༺✤✣══════╝\n","""
                 buttons=veriler[1],
                 link_preview=False,
             )
         else:
-            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™", cache_time=0, alert=True)
+            return await event.answer("𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐬𝐞𝐝 𝐭𝐨 𝐮𝐬𝐞 𝐦𝐞", cache_time=0, alert=True)
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)")))
@@ -409,7 +409,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         else:
-            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™", cache_time=0, alert=True)
+            return await event.answer("𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐬𝐞𝐝 𝐭𝐨 𝐮𝐬𝐞 𝐦𝐞", cache_time=0, alert=True)
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"commands\[(.*)\[(\d*)\]\]\((.*)\)")))
@@ -453,7 +453,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         else:
-            return await event.answer("𝕐𝕠𝕦 𝕒𝕣𝕖 𝕟𝕠𝕥 𝕒𝕦𝕥𝕙𝕠𝕣𝕚𝕫𝕖𝕕 𝕥𝕠 𝕦𝕤𝕖 𝕞𝕖! \n© 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™", cache_time=0, alert=True)
+            return await event.answer("𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐬𝐞𝐝 𝐭𝐨 𝐮𝐬𝐞 𝐦𝐞", cache_time=0, alert=True)
 
 
 # RomeoBot
