@@ -59,9 +59,9 @@ async def start_msg(client, pic, version, total):
     text = f"""
 ❥︎ 𝐒𝐓𝐀𝐑𝐓 ☟︎︎︎
 
-<b><i>Version :</b></i> <code>{version}</code>
-<b><i>Clients :</b></i> <code>{str(total)}</code>
-<b><i>Sudo :</b></i> <code>{is_sudo}</code>
+<b><i>🇻𝐄𝐑𝐒𝐈𝐎𝐍 ❥︎</b></i> <code>{version}</code>
+<b><i>🇨𝐋𝐈𝐄𝐍𝐓 ❥︎</b></i> <code>{str(total)}</code>
+<b><i>🇸𝐔𝐃𝐎 ❥︎</b></i> <code>{is_sudo}</code>
 
 <b><i>🌹 𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭 🌹</i></b>
 """
