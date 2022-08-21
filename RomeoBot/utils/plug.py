@@ -48,8 +48,8 @@ def load_module(shortname):
     else:
         import RomeoBot.utils
 
-        path = Path(f"Romeo/plugins/{shortname}.py")
-        name = "Romeo.plugins.{}".format(shortname)
+        path = Path(f"RomeoBot/plugins/{shortname}.py")
+        name = "RomeoBot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = Hell
