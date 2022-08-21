@@ -4,7 +4,7 @@ from RomeoBot.cmdhelp import CmdHelp
 x = True
 
 
-@hell_cmd(pattern="abuse(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="bc(?:\s|$)([\s\S]*)")
 async def yashraid(event):
     while x != False:
 
@@ -175,4 +175,4 @@ async def yashraid(event):
         )
 
 
-CmdHelp("mc").add_command("mc", None, "Use And See To Stop .reload").add()
+CmdHelp("bc").add_command("bc", None, "Use And See To Stop .reload").add()
