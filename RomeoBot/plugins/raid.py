@@ -1,7 +1,7 @@
 import asyncio
 import random
 
-from Romeobot.plugins import *
+from RomeoBot.plugins import *
 
 NUMBER = ["0", "1"]
 
