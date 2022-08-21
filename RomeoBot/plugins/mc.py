@@ -4,7 +4,7 @@ from RomeoBot.cmdhelp import CmdHelp
 x = True
 
 
-@hell_cmd(pattern="abuse(?:\s|$)([\s\S]*)"))
+@hell_cmd(pattern="abuse(?:\s|$)([\s\S]*)")
 async def yashraid(event):
     while x != False:
 
