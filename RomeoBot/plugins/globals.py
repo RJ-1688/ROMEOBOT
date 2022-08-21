@@ -7,9 +7,9 @@ from telethon.errors.rpcerrorlist import UserIdInvalidError, MessageTooLongError
 from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest, EditPhotoRequest
 from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 
-from UltronBot.sql.gban_sql import is_gbanned, gbaner, ungbaner, all_gbanned
-from UltronBot.sql.gvar_sql import gvarstat
-from UltronBot.sql import gmute_sql as gsql
+from RomeoBot.sql.gban_sql import is_gbanned, gbaner, ungbaner, all_gbanned
+from RomeoBot.sql.gvar_sql import gvarstat
+from RomeoBot.sql import gmute_sql as gsql
 from . import *
 
 
