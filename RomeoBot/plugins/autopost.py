@@ -1,7 +1,7 @@
 from telethon import events
 
-from UltronBot.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
-from UltronBot.sql.gvar_sql import gvarstat, addgvar, delgvar
+from RomeoBot.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
+from RomeoBot.sql.gvar_sql import gvarstat, addgvar, delgvar
 
 from . import *
 
