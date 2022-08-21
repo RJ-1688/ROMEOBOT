@@ -36,7 +36,7 @@ USER_BOT_WARN_ZERO = "𝔼𝕟𝕠𝕦𝕘𝕙 𝕆𝕗 𝕐𝕠𝕦𝕣 𝔽�
 alive_txt = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
 <b>Telethon ≈</b>  <i>{}</i>
-<b>Ultronẞø† ≈</b>  <i>{}</i>
+<b>Romeoẞø† ≈</b>  <i>{}</i>
 <b>Uptime ≈</b>  <i>{}</i>
 <b>Abuse ≈</b>  <i>{}</i>
 <b>Sudo ≈</b>  <i>{}</i>
@@ -164,7 +164,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     PIC,
                     text=he_ll,
-                    title="UltronBot Alive",
+                    title="RomeoBot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                     parse_mode="HTML",
@@ -172,7 +172,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             else:
                 result = builder.article(
                     text=he_ll,
-                    title="UltronBot Alive",
+                    title="RomeoBot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                     parse_mode="HTML",
@@ -206,7 +206,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     file=PIC,
                     text=HELL_FIRST,
-                    title="𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 ℙ𝕄 ℙ𝕖𝕣𝕞𝕚𝕥.",
+                    title=" ℙ𝕄 ℙ𝕖𝕣𝕞𝕚𝕥.",
                     buttons=[
                         [custom.Button.inline("📝 ℝ𝕖𝕢𝕦𝕖𝕤𝕥 𝔸𝕡𝕡𝕣𝕠𝕧𝕒𝕝", data="req")],
                         [custom.Button.inline("🚫 𝔹𝕝𝕠𝕔𝕜", data="heheboi")],
