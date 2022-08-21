@@ -597,7 +597,7 @@ if H5:
             total_afk_time = str((afk_end_5 - afk_start_5))
         current_message = event.message.message
         if "#" not in current_message and gvarstat("AFK5") == "YES":
-            UltronBot = await event.client.send_message(
+            RomeoBot = await event.client.send_message(
                 event.chat_id,
                 "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
                 + total_afk_time
