@@ -16,7 +16,7 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.types import DocumentAttributeFilename, DocumentAttributeSticker, InputStickerSetID, MessageMediaPhoto, InputMessagesFilterDocument
 from telethon.utils import get_input_document
 
-from UltronBot.sql.gvar_sql import addgvar, gvarstat
+from RomeoBot.sql.gvar_sql import addgvar, gvarstat
 from . import *
 
 KANGING_STR = [
