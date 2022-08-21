@@ -1,5 +1,5 @@
 from RomeoBot import hell as LEGEND
-from userbot.cmdhelp import CmdHelp
+from RomeoBot.cmdhelp import CmdHelp
 
 x = True
 
