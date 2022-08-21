@@ -15,9 +15,9 @@ from . import *
 ping_txt = """
 <b><i>★ 🇸𝐖𝐀𝐆𝐀𝐓★🇳𝐇𝐈★🇰𝐀𝐑𝐎𝐆𝐄★🇭𝐀𝐌𝐀𝐑𝐀 ★</b></i>
 
-    ⚘  <i>🇸𝐏𝐄𝐄𝐃 ❥︎</i> <code>{}</code>
-    ⚘  <i>🇺𝐏★🇹𝐈𝐌𝐄 ❥︎</i> <code>{}</code>
-    ⚘  <i>🇴𝐖𝐍𝐄𝐑 ❥︎</i> {}
+      <i>🇸𝐏𝐄𝐄𝐃 ❥︎</i> <code>{}</code>
+      <i>🇺𝐏★🇹𝐈𝐌𝐄 ❥︎</i> <code>{}</code>
+      <i>🇴𝐖𝐍𝐄𝐑 ❥︎</i> {}
 """
 
 
@@ -34,7 +34,7 @@ async def pong(hell):
         PIC = choice(pic_list)
     else:
         PIC = None
-    event = await eor(hell, "`·.·★ ℘ıŋɠ ★·.·´")
+    event = await eor(hell, "★🇵𝐈𝐍𝐆★")
     cid = await client_id(event)
     ForGo10God, HELL_USER = cid[0], cid[1]
     hell_mention = f"<a href='tg://user?id={ForGo10God}'>{HELL_USER}</a>"
@@ -70,12 +70,12 @@ async def is_limited(event):
         
 @hell_cmd(pattern="kickme$")
 async def leave(e):
-        await e.edit("😪 **KThnxBye** See u all in hell!!")
+        await e.edit("𝐁𝐲𝐲𝐲𝐲𝐲𝐲")
         time.sleep(1)
         if "-" in str(e.chat_id):
             await event.client(LeaveChannelRequest(e.chat_id))
         else:
-            await eod(e, "**Iz this even a grp?😑**")
+            await eod(e, "**𝐓𝐡𝐢𝐬 𝐞𝐯𝐞𝐧 𝐚 𝐆𝐫𝐩 😜**")
 
 
 @hell_cmd(pattern="dc$")
@@ -105,7 +105,7 @@ async def lst(event):
         hell = await eor(event, "Getting configs list...")
         osx = "**• List of OS Configs:** \n\n"
         for data in os_config:
-            osx += f"» `{data}`\n"
+            osx += f"❥︎ `{data}`\n"
         await hell.edit(osx)
 
 
@@ -166,7 +166,7 @@ CmdHelp("bot").add_command(
 ).add_command(
     "kickme", None, "Kicks Yourself from the group."
 ).add_command(
-    "ping", None, "Checks the ping speed of your Hêllẞø†"
+    "ping", None, "Checks the ping speed of your Bot"
 ).add_command(
     "schd", "<secs> - <message>", "Sends your message in given secs", "schd 10 - Hello"
 ).add_command(
