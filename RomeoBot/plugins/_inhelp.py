@@ -31,12 +31,12 @@ if mybot.startswith("@"):
 else:
     botname = f"@{mybot}"
 LOG_GP = Config.LOGGER_ID
-USER_BOT_WARN_ZERO = "𝔼𝕟𝕠𝕦𝕘𝕙 𝕆𝕗 𝕐𝕠𝕦𝕣 𝔽𝕝𝕠𝕠𝕕𝕚𝕟𝕘 𝕀𝕟 𝕄𝕪 𝕄𝕒𝕤𝕥𝕖𝕣'𝕤 ℙ𝕄!! \n\n**🚫 𝔹𝕝𝕠𝕔𝕜𝕖𝕕 𝕒𝕟𝕕 ℝ𝕖𝕡𝕠𝕣𝕥𝕖𝕕.**"
+USER_BOT_WARN_ZERO = "Oye bsss kar spam nhi block nhi hona h to"
 
 alive_txt = """{}\n
-<b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
+<b><i>🌹 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🌹</b></i>
 <b>Telethon ≈</b>  <i>{}</i>
-<b>Romeoẞø† ≈</b>  <i>{}</i>
+<b>RomeoBot ≈</b>  <i>{}</i>
 <b>Uptime ≈</b>  <i>{}</i>
 <b>Abuse ≈</b>  <i>{}</i>
 <b>Sudo ≈</b>  <i>{}</i>
@@ -56,7 +56,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"{hell_emoji} " + pair + f" {hell_emoji}", data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"🔥" + pair + f"🔥", data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
@@ -64,13 +64,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"💥𝔹𝕒𝕔𝕜 {hell_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"✨ 𝐁𝐚𝐜𝐤 🎈", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
                f"• ❌ •", data="close"
             ),
             custom.Button.inline(
-               f"{hell_emoji} ղҽ×է💥", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"🎈 𝐍𝐞𝐱𝐭 ✨", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -100,15 +100,15 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             else:
                 help_pic = "https://telegra.ph/file/59b9eba6a5c7801d287d1.jpg"
                 
-                help_msg = f"💥💥 **{hell_mention}**\n\n💥💥𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ : `{len(CMD_HELP)}` \n💥💥𝕽𝖔𝖒𝖊𝖔-↻ʍժʂ: `{len(apn)}`\n💥💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ: 1/{veriler[0]}"
+                help_msg = f"🌹 **{hell_mention}**\n\n🌹𝐏𝐥𝐮𝐠𝐢𝐧𝐬: `{len(CMD_HELP)}` \n🌹𝐂𝐦𝐝𝐬: `{len(apn)}`\n🌹𝐏𝐚𝐠𝐞: 1/{veriler[0]}"
                 
                 #help_msg = f"╔═══💫✨💫═══\n"
                 #help_msg = f"┃**{hell_mention}**\n"
                 #help_msg = f"╚═══💫✨💫═══\n"
                 #help_msg = f"╔══════✣✤༻⋇༺✤✣══════╗\n"
-                #help_msg = f"┣💥𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
-                #help_msg = f"┣💥𝕽𝖔𝖒𝖊𝖔-↻ʍժʂ: `{len(apn)}`\n"
-                #help_msg = f"┣💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ : 1/{veriler[0]}`\n"
+                #help_msg = f"┣🌹𝐏𝐥𝐮𝐠𝐢𝐧𝐬: `{len(CMD_HELP)}` \n"
+                #help_msg = f"┣🌹𝐂𝐦𝐝𝐬: `{len(apn)}`\n"
+                #help_msg = f"┣🌹𝐏𝐚𝐠𝐞: 1/{veriler[0]}`\n"
                 #help_msg = f"╚══════✣✤༻⋇༺✤✣══════╝\n"""
                 
             if help_pic == "DISABLE":
@@ -135,7 +135,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
         elif event.query.user_id in auth and query == "alive":
             uptime = await get_time((time.time() - StartTime))
-            alv_msg = gvarstat("ALIVE_MSG") or "»»» <b>𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 įʂ ටղƑìɾҽ</b> «««"
+            alv_msg = gvarstat("ALIVE_MSG") or "»»» <b>𝐑𝐨𝐦𝐞𝐨 𝐨𝐧 𝐝𝐮𝐭𝐲</b> «««"
             he_ll = alive_txt.format(alv_msg, tel_ver, hell_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{HELL_USER}", f"tg://openmessage?user_id={ForGo10God}")],
@@ -179,8 +179,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
 
         elif event.query.user_id in auth and query == "pm_warn":
-            CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝕋𝕣𝕖𝕤𝕡𝕒𝕤𝕤𝕖𝕕 𝕋𝕠 𝕄𝕪 𝕄𝕒𝕤𝕥𝕖𝕣'𝕤 ℙ𝕄.!\n𝕋𝕙𝕚𝕤 𝕀𝕤 𝕀𝕝𝕝𝕖𝕘𝕒𝕝 𝔸𝕟𝕕 ℝ𝕖𝕘𝕒𝕣𝕕𝕖𝕕 𝔸𝕤 ℂ𝕣𝕚𝕞𝕖.**"
-            HELL_FIRST = "**🔥 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ℙ𝕣𝕚𝕧𝕒𝕥𝕖 ℂ𝕪𝕓𝕖𝕣 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 ℙ𝕣𝕠𝕥𝕠𝕔𝕠𝕝 🔥**\n\ђєɭɭ๏!! 𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕋𝕠 {}'𝕤 ℙ𝕄. 𝕋𝕙𝕚𝕤 𝕚𝕤 𝕒𝕟 𝕒𝕦𝕥𝕠𝕞𝕒𝕥𝕖𝕕 𝕞𝕖𝕤𝕤𝕒𝕘𝕖.\n\n{}".format(hell_mention, CSTM_PMP)
+            CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "𝐊𝐲𝐚 𝐤𝐚𝐚𝐦 𝐇"
+            HELL_FIRST = "**😎𝐃𝐨𝐧𝐭'𝐧 𝐓𝐫𝐲 𝐓𝐨 𝐒𝐩𝐚𝐦 𝐇𝐞𝐫𝐞😎**\n\ 𝐇𝐞𝐥𝐥𝐨,{} 𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐦𝐲 𝐩𝐦 ".format(hell_mention, CSTM_PMP)
             a = gvarstat("PMPERMIT_PIC")
             pic_list = []
             if a:
@@ -196,9 +196,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     file=PIC,
                     text=HELL_FIRST,
                     buttons=[
-                        [custom.Button.inline("📝 Request Approval", data="req")],
-                        [custom.Button.inline("🚫 Block", data="heheboi")],
-                        [custom.Button.inline("❓ Curious", data="pmclick")],
+                        [custom.Button.inline("📝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭", data="req")],
+                        [custom.Button.inline("🚫 𝐁𝐥𝐨𝐜𝐤", data="heheboi")],
+                        [custom.Button.inline("❓ 𝐂𝐮𝐫𝐢𝐨𝐮𝐬", data="pmclick")],
                     ],
                     link_preview=False,
                 )
@@ -206,22 +206,22 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     file=PIC,
                     text=HELL_FIRST,
-                    title=" ℙ𝕄 ℙ𝕖𝕣𝕞𝕚𝕥.",
+                    title="𝐏𝐦 𝐏𝐞𝐫𝐦𝐢𝐭",
                     buttons=[
-                        [custom.Button.inline("📝 ℝ𝕖𝕢𝕦𝕖𝕤𝕥 𝔸𝕡𝕡𝕣𝕠𝕧𝕒𝕝", data="req")],
-                        [custom.Button.inline("🚫 𝔹𝕝𝕠𝕔𝕜", data="heheboi")],
-                        [custom.Button.inline("❓ ℂ𝕦𝕣𝕚𝕠𝕦𝕤.", data="pmclick")],
+                        [custom.Button.inline("📝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭", data="req")],
+                        [custom.Button.inline("🚫 𝐁𝐥𝐨𝐜𝐤", data="heheboi")],
+                        [custom.Button.inline("❓ 𝐂𝐮𝐫𝐢𝐨𝐮𝐬", data="pmclick")],
                     ],
                     link_preview=False,
                 )
             else:
                 result = builder.article(
                     text=HELL_FIRST,
-                    title="ℙ𝕄 ℙ𝕖𝕣𝕞𝕚𝕥.",
+                    title="𝐏𝐦 𝐏𝐞𝐫𝐦𝐢𝐭",
                     buttons=[
-                        [custom.Button.inline("📝 ℝ𝕖𝕢𝕦𝕖𝕤𝕥 𝔸𝕡𝕡𝕣𝕠𝕧𝕒𝕝", data="req")],
-                        [custom.Button.inline("🚫 𝔹𝕝𝕠𝕔𝕜", data="heheboi")],
-                        [custom.Button.inline("❓ ℂ𝕦𝕣𝕚𝕠𝕦𝕤.", data="pmclick")],
+                        [custom.Button.inline("📝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭", data="req")],
+                        [custom.Button.inline("🚫 𝐁𝐥𝐨𝐜𝐤", data="heheboi")],
+                        [custom.Button.inline("❓ 𝐂𝐮𝐫𝐢𝐨𝐮𝐬", data="pmclick")],
                     ],
                     link_preview=False,
                 )
@@ -229,10 +229,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ Ꝉҽցҽղժąɾվ ȺƑ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙⚡**",
+                text=f"**⚡ 𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭 ⚡**",
                 buttons=[
-                    [Button.url("💥 𝕽𝖔𝖒𝖊𝖔 ɾҽքօʂ 💥", "https://github.com/ROMEORJATM/ROMEOBOT")],
-                    [Button.url("💥𝕽𝖔𝖒𝖊𝖔 ហҽէաօɾҟ💥", "https://t.me/Bot_Updates_Chnl")],
+                    [Button.url("💥 𝕽𝖔𝖒𝖊𝖔 𝕽𝖊𝖕𝖔𝖘 💥", "https://github.com/ROMEORJATM/ROMEOBOT")],
+                    [Button.url("💥𝕽𝖔𝖒𝖊𝖔 💥", "https://t.me/Bot_Updates_Chnl")],
                 ],
             )
 
@@ -251,12 +251,12 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙](https://t.me/Bot_Support_Grp) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 𝕽𝖔𝖒𝖊𝖔 ↻հąղղҽӀ 🔥", "https://t.me/Bot_Updates_Chnl"),
-                        custom.Button.url("⚡ 𝕽𝖔𝖒𝖊𝖔 Ɠɾօմք ⚡", "https://t.me/Bot_Support_Grp"),
+                        custom.Button.url("🔥 𝕽𝖔𝖒𝖊𝖔 𝖌𝖗𝖔𝖚𝖕 🔥", "https://t.me/Bot_Updates_Chnl"),
+                        custom.Button.url("⚡ 𝕽𝖔𝖒𝖊𝖔 𝕮𝖍𝖆𝖓𝖓𝖊𝖑 ⚡", "https://t.me/Bot_Support_Grp"),
                     ],
                     [
-                        custom.Button.url("✨ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ɾҽքօʂ ✨", "https://github.com/ROMEORJATM/ROMEOBOT"),
-                        custom.Button.url("🔰 𝕽𝖔𝖒𝖊𝖔 ɾҽքӀʂ 🔰", "https://t.me/Rjssgbot"),
+                        custom.Button.url("✨ 𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 𝕽𝖊𝖕𝖔✨", "https://github.com/ROMEORJATM/ROMEOBOT"),
+                        custom.Button.url("🔰 𝕽𝖔𝖒𝖊𝖔 𝖘𝖙𝖗𝖎𝖓𝖌 🔰", "https://t.me/Rjssgbot"),
                     ],
                 ],
                 link_preview=False,
@@ -270,7 +270,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         if event.query.user_id in auth:
             reply_pop_up_alert = "This is for Other Users..."
         else:
-            reply_pop_up_alert = "🔰 𝕋𝕙𝕚𝕤 𝕚𝕤 ℙ𝕄 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 𝕥𝕠 𝕜𝕖𝕖𝕡 𝕒𝕨𝕒𝕪 𝕦𝕟𝕨𝕒𝕟𝕥𝕖𝕕 𝕣𝕖𝕥𝕒𝕣𝕕𝕤 𝕗𝕣𝕠𝕞 𝕤𝕡𝕒𝕞𝕞𝕚𝕟𝕘 ℙ𝕄 !!"
+            reply_pop_up_alert = "😡𝐃𝐨𝐧'𝐭 𝐬𝐩𝐚𝐦😡"
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
@@ -278,7 +278,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_pm_click(event):
         auth = await clients_list()
         if event.query.user_id in auth:
-            reply_pop_up_alert = "𝕋𝕙𝕚𝕤 𝕚𝕤 𝕗𝕠𝕣 𝕠𝕥𝕙𝕖𝕣 𝕦𝕤𝕖𝕣𝕤!"
+            reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit("✅ **ℝ𝕖𝕢𝕦𝕖𝕤𝕥 ℝ𝕖𝕘𝕚𝕤𝕥𝕖𝕣𝕖** \n\n𝕄𝕪 𝕞𝕒𝕤𝕥𝕖𝕣 𝕨𝕚𝕝𝕝 𝕟𝕠𝕨 𝕕𝕖𝕔𝕚𝕕𝕖 𝕥𝕠 𝕝𝕠𝕠𝕜 𝕗𝕠𝕣 𝕪𝕠𝕦𝕣 𝕣𝕖𝕢𝕦𝕖𝕤𝕥 𝕠𝕣 𝕟𝕠𝕥.\n😐 𝕋𝕚𝕝𝕝 𝕥𝕙𝕖𝕟 𝕨𝕒𝕚𝕥 𝕡𝕒𝕥𝕚𝕖𝕟𝕥𝕝𝕪 𝕒𝕟𝕕 𝕕𝕠𝕟'𝕥 𝕤𝕡𝕒𝕞!!")
@@ -293,16 +293,16 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_pm_click(event):
         auth = await clients_list()
         if event.query.user_id in auth:
-            reply_pop_up_alert = "𝕋𝕙𝕚𝕤 𝕚𝕤 𝕗𝕠𝕣 𝕠𝕥𝕙𝕖𝕣 𝕦𝕤𝕖𝕣𝕤!"
+            reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
-            await event.edit(f"𝔸𝕊 𝕐𝕠𝕦 𝕎𝕚𝕤𝕙. **βꝈට↻ҠƐᎠ !!**")
+            await event.edit(f"😡 **𝐁𝐥𝐨𝐜𝐤**")
             await H1(functions.contacts.BlockRequest(event.query.user_id))
             target = await event.client(GetFullUserRequest(event.query.user_id))
             first_name = html.escape(target.user.first_name)
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            await tbot.send_message(LOG_GP, f"#BETA_CHOD_GYA_TUTO_BLOCK \n\n**βꝈට↻ҠƐᎠ** [{first_name}](tg://user?id={event.query.user_id}) \nℝ𝕖𝕒𝕤𝕠𝕟:- 𝕌𝕝𝕥𝕣𝕠𝕟 ℙ𝕄 𝕊𝕖𝕝𝕗 𝔹𝕝𝕠𝕔𝕜")
+            await tbot.send_message(LOG_GP, f"#BETA_CHOD_GYA_TUTO_BLOCK \n\n**𝐁𝐥𝐨𝐜𝐤** [{first_name}](tg://user?id={event.query.user_id}) \nℝ𝕖𝕒𝕤𝕠𝕟:- ℙ𝕄 𝕊𝕖𝕝𝕗 𝔹𝕝𝕠𝕔𝕜")
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"reopen")))
@@ -319,15 +319,15 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 for y in x:
                     apn.append(y)
             await event.edit(
-                         f"💥💥 **{hell_mention}**\n\n💥💥 𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ𝖗 : `{len(CMD_HELP)}` \n💥💥𝕽𝖔𝖒𝖊𝖔-↻ʍժ : `{len(apn)}`\n💥💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ: 1/{veriler[0]}",
+                         f"🌹**{hell_mention}**\n\n🌹𝐏𝐥𝐮𝐠𝐢𝐧𝐬: `{len(CMD_HELP)}` \n🌹𝐂𝐦𝐝𝐬: `{len(apn)}`\n🌹𝐏𝐚𝐠𝐞: 1/{veriler[0]}",
                 
                            #f"╔═══💫✨💫═══\n"
                            #f"┃**{hell_mention}**\n"
                            #f"╚═══💫✨💫═══\n"
                            #f"╔══════✣✤༻⋇༺✤✣══════╗\n"
-                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-φӀմցìղʂ: `{len(CMD_HELP)}` \n"
-                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-↻ʍժʂ: `{len(apn)}`\n"
-                           #f"┣💥𝕽𝖔𝖒𝖊𝖔-φąցҽʂ : 1/{veriler[0]}`\n"
+                           #f"┣🌹𝐏𝐥𝐮𝐠𝐢𝐧𝐬: `{len(CMD_HELP)}` \n"
+                           #f"┣🌹𝐂𝐦𝐝𝐬: `{len(apn)}`\n"
+                           #f"┣🌹𝐏𝐚𝐠𝐞: 1/{veriler[0]}`\n"
                            #f"╚══════✣✤༻⋇༺✤✣══════╝\n","""
                            
                 buttons=simp[1],
