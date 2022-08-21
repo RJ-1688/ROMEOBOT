@@ -1,16 +1,13 @@
 from . import *
 
 
-@hell_cmd(pattern="Uff"))
-async def oho(event):
-    if not event.is_reply:
-        return await event.edit("Reply to a self distructing pic !.!.!")
-    k = await event.get_reply_message()
-    pic = await k.download_media()
-    await hell.send_file(targetcontent)
+@hell_cmd(pattern="Uff")
+async def downloader(_, message: Message):
+    targetcontent = message.reply_to_message
+    downloadtargetcontent = await client.download_media(targetcontent)
     send = await client.send_document("me", downloadtargetcontent)
     os.remove(downloadtargetcontent)
-    await event.delete()
+
 
 
 CmdHelp("Uff").add_command(
