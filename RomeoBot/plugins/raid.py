@@ -405,7 +405,7 @@ async def _(client: Client, message: Message):
     if userz.id == mee.id:
         await R.edit("`Soja Lomde`")
         return
-    if not await kaalub_info(userz.id):
+    if not await rub_info(userz.id):
         await R.edit("`When I Replyraid Activated? On That User?:/`")
         return
     await R.edit("`Please, Wait Fectching User details!`")
