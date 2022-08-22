@@ -2,6 +2,7 @@ import os
 
 from RomeoBot import CMD_HELP, CMD_HELP_BOT
 
+from .k import * 
 
 COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r".")
 
