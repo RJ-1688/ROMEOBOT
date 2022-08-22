@@ -259,23 +259,25 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             reply_pop_up_alert = "This is for Other Users..."
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
+            event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
             await event.edit(
-                f"🔰 This is Lêɠêɳ̃dẞø† PM Security for {legend_mention} to keep away unwanted retards from spamming PM..."
+                f"🔰 This is RomeoBot PM Security for {event_mention} to keep away unwanted retards from spamming PM..."
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
-    async def on_pm_click(legend):
-        if legend.query.user_id == bot.uid:
-            fck_bit = f"Oh! C'mon Master {legend_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
-            await legend.answer(fck_bit, cache_time=0, alert=True)
+    async def on_pm_click(event):
+        if event.query.user_id == bot.uid:
+            event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
+            fck_bit = f"Oh! C'mon Master {event_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+            await event.answer(fck_bit, cache_time=0, alert=True)
             return
-        await legend.get_chat()
-        legend.query.user_id
-        await legend.edit(
+        await event.get_chat()
+        event.query.user_id
+        await event.edit(
             "Oh You Wanna Talk With My Master\n\nPls Wait Dear \n\n**Btw** **You Can Wait For My Master**"
         )
         await asyncio.sleep(2)
-        await legend.edit(
+        await event.edit(
             "Which Type Of Request U Want?",
             buttons=[
                 [Button.inline("Register", data="school")],
@@ -283,7 +285,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             ],
         )
         yup_text = "`Warning`-❗️⚠️Don't send any message now wait kindly!!!❗️⚠️"
-        await bot.send_message(legend.query.user_id, yup_text)
+        await bot.send_message(event.query.user_id, yup_text)
 
 
 
