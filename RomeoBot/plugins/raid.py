@@ -351,26 +351,26 @@ async def spam(e):
 
 
 @hell_cmd(pattern="rr(?:\s|$)([\s\S]*)")
-async def spam(e):
-    if e.fwd_from:
+async def spam(r):
+    if r.fwd_from:
         return
-    legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-    await e.get_reply_message()
-    if e.reply_to_msg_id:
-        a = await e.get_reply_message()
-        b = await e.client.get_entity(a.sender_id)
+    legend = ("".join(r.text.split(maxsplit=1)[1:])).split(" ", 1)
+    await r.get_reply_message()
+    if r.reply_to_msg_id:
+        a = await r.get_reply_message()
+        b = await r.client.get_entity(a.sender_id)
         g = b.id
         c = b.first_name
         counter = int(legend[0])
         username = f"[{c}](tg://user?id={g})"
         for _ in range(counter):
-            reply = random.choice(RAID)
+            reply = random.choice.reply_(RAID)
             caption = f"{username} {reply}"
-            async with e.client.action(e.chat_id, "typing"):
-                await e.client.send_message(e.chat_id, caption)
+            async with r.client.action(r.chat_id, "typing"):
+                await r.client.send_message(r.chat_id, caption)
                 await asyncio.sleep(0.3)
     else:
-        await e.reply(usage, parse_mode=None, link_preview=None)
+        await r.reply(usage, parse_mode=None, link_preview=None)
 
 
 @hell_cmd(pattern="dr(?:\s|$)([\s\S]*)")
