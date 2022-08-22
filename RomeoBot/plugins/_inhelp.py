@@ -255,7 +255,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
     async def on_pm_click(event):
-        if event.query.user_id == bot.uid:
+        auth = await clients_list()
+        if event.query.user_id in auth:
             reply_pop_up_alert = "This is for Other Users..."
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
@@ -266,7 +267,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
     async def on_pm_click(event):
-        if event.query.user_id == bot.uid:
+        auth = await clients_list()
+        if event.query.user_id in auth:
             event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
             fck_bit = f"Oh! C'mon Master {event_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
             await event.answer(fck_bit, cache_time=0, alert=True)
@@ -291,7 +293,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"tg_okay")))
     async def yeahbaba(event):
-        if event.query.user_id == bot.uid:
+        auth = await clients_list()
+        if event.query.user_id in auth:
             fck_bit = f"Oh! C'mon Master.This Is for other users"
             await event.answer(fck_bit, cache_time=0, alert=True)
         else:
@@ -310,7 +313,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
      
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"school")))
     async def yeahbaba(event):
-        if event.query.user_id == bot.uid:
+        auth = await clients_list()
+        if event.query.user_id in auth:
             fck_bit = f"This Is For Other user"
             await event.answer(fck_bit, cache_time=0, alert=True)
         else:
@@ -329,8 +333,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"chat")))
     async def on_pm_click(event):
+        auth = await clients_list()
         event.query.user_id
-        if event.query.user_id == bot.uid:
+        if event.query.user_id in auth:
             reply_pop_up_alert = "This is for other users!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
@@ -349,7 +354,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
     async def on_pm_click(event):
-        if event.query.user_id == bot.uid:
+        auth = await clients_list()
+        if event.query.user_id in auth:
             event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
             fck_bit = f"Oh! C'mon Master{event_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
             await event.answer(fck_bit, cache_time=0, alert=True)
@@ -380,7 +386,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"hmm")))
     async def yes_ucan(event):
-        if event.query.user_id == bot.uid:
+        auth = await clients_list()
+        if event.query.user_id in auth:
             lmaoo = "You Are Not Requesting , Lol."
             await event.answer(lmaoo, cache_time=0, alert=True)
             return
@@ -393,7 +400,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lemme_ban")))
     async def yes_ucan(event):
-        if event.query.user_id == bot.uid:
+        auth = await clients_list()
+        if event.query.user_id in auth:
             lmaoo = "You Are Not Requesting , Lol."
             await event.answer(lmaoo, cache_time=0, alert=True)
             return
@@ -412,7 +420,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lemme_ban")))
     async def yes_ucan(event):
-        if event.query.user_id == bot.uid:
+        auth = await clients_list()
+        if event.query.user_id in auth:
             lmaoo = "You Are Not Requesting , Lol."
             await event.answer(lmaoo, cache_time=0, alert=True)
             return
