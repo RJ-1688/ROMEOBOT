@@ -351,7 +351,7 @@ async def spam(e):
 
 
 @hell_cmd(pattern="rr(?:\s|$)([\s\S]*)")
-async def replyramd(client: Client, message: Message):
+async def _(client: Client, message: Message):
     R = await message.reply_text(RAID)
     text_ = get_text(message)
     user, reason = get_user(message, text_)
@@ -388,7 +388,7 @@ async def replyramd(client: Client, message: Message):
     await R.edit(gbanned)
 
 @hell_cmd(pattern="dr(?:\s|$)([\s\S]*)")
-async def dreplyramd(client: Client, message: Message):
+async def _(client: Client, message: Message):
     R = await message.reply_text(RAID)
     text_ = get_text(message)
     user = get_user(message, text_)[0]
