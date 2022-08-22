@@ -75,9 +75,12 @@ async def start_RomeoBot():
         LOGS.info("┣❥︎𝐋𝐨𝐚𝐝𝐢𝐧𝐠...")
         await plug_load("RomeoBot/plugins/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
-        LOGS.info(f"""
-                      ┣❥︎ 🇷𝐎𝐌𝐄𝐎 𝐎𝐍 𝐅𝐈𝐑𝐄             
-                      ┣❥︎ 🇻𝐄𝐑𝐒𝐈𝐎𝐍 ❥︎ 1.0""")                     LOGS.info(f"» Total Clients = {str(total)} «")
+        LOGS.info(f"""🇷𝐎𝐌𝐄𝐎★𝐁𝐎𝐓
+                      ╔══════════════════❥︎
+                      ║┣❥︎🇴𝐖𝐍𝐄𝐑 ❥︎ 𝕾🅡︎🅐︎🅙︎𝕾
+                      ║┣❥︎🇻𝐄𝐑𝐒𝐈𝐎𝐍 ❥︎ 1.0
+                      ╚══════════════════❥︎""")
+        LOGS.info(f"» Total Clients = {str(total)} «")
         await hell_is_on(total)
     except Exception as e:
         LOGS.error(f"{str(e)}")
