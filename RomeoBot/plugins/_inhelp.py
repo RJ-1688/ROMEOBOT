@@ -275,7 +275,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             first_name = html.escape(target.user.first_name)
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            await tbot.send_message(LOG_GP, f"𝐡𝐞𝐲 \n\n⚜️ 𝐘𝐨𝐮 𝐠𝐨𝐭 𝐚 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 [{first_name}](tg://user?id={event.query.user_id}) !")
+            await tbot.send_message(LOG_GP, f"**𝐡𝐞𝐲 {event_mention} !!**\n\n⚜️ 𝐘𝐨𝐮 𝐠𝐨𝐭 𝐚 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 [{first_name}](tg://user?id={event.query.user_id}) !")
 
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"tg_okay")))
