@@ -311,7 +311,7 @@ RAID = [
 que = {}
 
 
-@bot.on(admin_cmd(incoming=True))
+@hell_cmd(incoming=True)
 @bot.on(sudo_cmd(incoming=True, allow_sudo=True))
 async def _(event):
     global que
@@ -328,7 +328,7 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern="raid(?: |$)(.*)"))
+@hell_cmd(pattern="raid(?:\s|$)([\s\S]*)")
 @bot.on(sudo_cmd(pattern="raid(?: |$)(.*)", allow_sudo=True))
 async def spam(e):
     if e.fwd_from:
@@ -352,7 +352,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@bot.on(admin_cmd(pattern="replyraid(?: |$)(.*)"))
+@hell_cmd(pattern="replyraid(?:\s|$)([\s\S]*)")
 @bot.on(sudo_cmd(pattern="replyraid(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
@@ -384,7 +384,7 @@ async def _(event):
         await event.edit(f"Started Raid")
 
 
-@bot.on(admin_cmd(pattern="dreplyraid(?: |$)(.*)"))
+@hell_cmd(pattern="dreplyraid(?:\s|$)([\s\S]*)")
 @bot.on(sudo_cmd(pattern="dreplyraid(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
