@@ -595,7 +595,7 @@ async def spam(r):
 async def spam(j):
     if j.fwd_from:
         return
-    legend = ("".join(r.text.split(maxsplit=1)[1:])).split(" ", 1)
+    legend = ("".join(j.text.split(maxsplit=1)[1:])).split(" ", 1)
     await j.get_reply_message()
     if j.reply_to_msg_id:
         a = await j.get_reply_message()
@@ -624,4 +624,8 @@ CmdHelp("raid").add_command(
     ".raid 10 reply to anyone message",
 ).add_command("lr", None, "Reply to him or her to start raid"
 ).add_command("psm", None, "Reply to him or her to start porm_raid"
+).add_info(
+  "Spammers Commands"
+).add_warning(
+  "❌ May Get Floodwait Error Or Limit Your Account"
 ).add()
