@@ -373,8 +373,6 @@ async def spam(r):
         await r.reply(usage, parse_mode=None, link_preview=None)
 
 
-@hell_cmd(pattern="dr(?:\s|$)([\s\S]*)")
-
 
 from RomeoBot.cmdhelp import CmdHelp
 
@@ -383,8 +381,7 @@ CmdHelp("raid").add_command(
     "<Reply to a User With Number>",
     "Use and see",
     ".raid 10 reply to anyone message",
-).add_command("rr", None, "Reply to him or her to start raid").add_command(
-    "dr", None, "Reply To her Ya him To stop raid"
+).add_command("rr", None, "Reply to him or her to start raid")
 ).add_type(
     "Addons"
 ).add()
