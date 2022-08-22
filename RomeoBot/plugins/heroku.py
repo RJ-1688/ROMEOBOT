@@ -49,7 +49,7 @@ async def re(hell):
 @hell_cmd(pattern="reload$")
 async def rel(event):
     await eor(event, "Reloading RomeoBot... Wait for few seconds...")
-    await reload_UltronBot()
+    await reload_RomeoBot()
 
 
 @hell_cmd(pattern="shutdown$")
