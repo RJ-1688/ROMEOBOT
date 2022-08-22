@@ -31,7 +31,7 @@ if mybot.startswith("@"):
 else:
     botname = f"@{mybot}"
 LOG_GP = Config.LOGGER_ID
-USER_BOT_WARN_ZERO = "Oye bsss kar spam nhi block nhi hona h to"
+USER_BOT_WARN_ZERO = "𝐎𝐲𝐞 𝐛𝐬𝐬𝐬 𝐤𝐚𝐫 𝐛𝐨𝐥𝐚 𝐧 𝐬𝐩𝐚𝐦 𝐧𝐡𝐢 𝐰𝐚𝐫𝐧𝐚 𝐛𝐥𝐨𝐜𝐡 𝐡𝐨𝐠𝐞"
 
 alive_txt = """{}\n
 <b><i>🌹 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🌹</b></i>
@@ -134,8 +134,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             he_ll = alive_txt.format(alv_msg, tel_ver, hell_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{HELL_USER}", f"tg://openmessage?user_id={ForGo10God}")],
-                [Button.url("My Channel", f"https://t.me/{my_channel}"), 
-                Button.url("My Group", f"https://t.me/{my_group}")],
+                [Button.url("𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐂𝐇𝐍𝐋", f"https://t.me/{my_channel}"), 
+                Button.url("𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐆𝐑𝐏", f"https://t.me/{my_group}")],
             ]
             a = gvarstat("ALIVE_PIC")
             pic_list = []
@@ -257,7 +257,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_pm_click(event):
         auth = await clients_list()
         if event.query.user_id in auth:
-            reply_pop_up_alert = "This is for Other Users..."
+            reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬..."
         else:
             reply_pop_up_alert = "😡𝐃𝐨𝐧'𝐭 𝐬𝐩𝐚𝐦😡"
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
@@ -275,7 +275,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             first_name = html.escape(target.user.first_name)
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            await tbot.send_message(LOG_GP, f"#ROMEO_REQUEST \n\n⚜️ 𝐘𝐨𝐮 𝐠𝐨𝐭 𝐚 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 [{first_name}](tg://user?id={event.query.user_id}) !")
+            await tbot.send_message(LOG_GP, f"𝐡𝐞𝐲 \n\n⚜️ 𝐘𝐨𝐮 𝐠𝐨𝐭 𝐚 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 [{first_name}](tg://user?id={event.query.user_id}) !")
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
@@ -334,7 +334,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         auth = await clients_list()
         if event.query.user_id in auth:
             veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
-            await event.edit(f"**🌹 𝐁𝐨𝐭 𝐦𝐞𝐧𝐮 𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐫 𝐧𝐨𝐰 𝐜𝐥𝐨𝐬𝐞𝐝 🌹**\n\n**𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 :**  {hell_mention}\n\n        [©️𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™️]({chnl_link})", buttons=veriler, link_preview=False)   
+            await event.edit(f"**🌹 𝐁𝐨𝐭 𝐦𝐞𝐧𝐮 𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐫 𝐧𝐨𝐰 𝐜𝐥𝐨𝐬𝐞𝐝 🌹**\n\n**𝐑𝐎𝐌𝐄𝐎𝐁𝐎𝐓**  {hell_mention}\n\n        [©️𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 ™️]({chnl_link})", buttons=veriler, link_preview=False)   
                                 #f"╔═══💫✨💫═══\n"
                                 #f"┃**🌹 𝐁𝐨𝐭 𝐦𝐞𝐧𝐮 𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐫 𝐧𝐨𝐰 𝐜𝐥𝐨𝐬𝐞𝐝 🌹**\n"
                                 #f"┃**𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙 :**  {hell_mention}\n"  
@@ -390,7 +390,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             return await event.answer("No Description is written for this plugin", cache_time=0, alert=True)
 
         buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline(,"🔥 Main Menu 🔥", data=f"page({page})")])
+        buttons.append([custom.Button.inline(,"🌹 𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔 🌹", data=f"page({page})")])
         if event.query.user_id in auth:
             await event.edit(
                 f"**📗 File :**  `{commands}`\n**🔢 Number of commands :**  `{len(CMD_HELP_BOT[commands]['commands'])}`",
@@ -438,7 +438,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         if event.query.user_id in auth:
             await event.edit(
                 result,
-                buttons=[custom.Button.inline(f"{hell_emoji} Return {hell_emoji}", data=f"Information[{page}]({cmd})")],
+                buttons=[custom.Button.inline(f"🌹 𝐑𝐄𝐓𝐔𝐑𝐍 🌹", data=f"Information[{page}]({cmd})")],
                 link_preview=False,
             )
         else:
