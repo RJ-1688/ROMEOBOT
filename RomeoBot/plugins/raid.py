@@ -381,5 +381,5 @@ CmdHelp("raid").add_command(
     "<Reply to a User With Number>",
     "Use and see",
     ".raid 10 reply to anyone message",
-).add_command("rr", None, "Reply to him or her to start raid")
+).add_command("rr", None, "Reply to him or her to start raid"
 ).add()
