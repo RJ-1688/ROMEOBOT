@@ -510,7 +510,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@hell_cmd(pattern="rr(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="lr(?:\s|$)([\s\S]*)")
 async def spam(r):
     if r.fwd_from:
         return
@@ -524,7 +524,7 @@ async def spam(r):
         counter = int(legend[0])
         username = f"[{c}](tg://user?id={g})"
         for _ in range(counter):
-            reply = random.choice.reply_(RAID)
+            reply = random.choice(LOVE)
             caption = f"{username} {reply}"
             async with r.client.action(r.chat_id, "typing"):
                 await r.client.send_message(r.chat_id, caption)
@@ -541,5 +541,5 @@ CmdHelp("raid").add_command(
     "<Reply to a User With Number>",
     "Use and see",
     ".raid 10 reply to anyone message",
-).add_command("rr", None, "Reply to him or her to start raid"
+).add_command("lr", None, "Reply to him or her to start raid"
 ).add()
