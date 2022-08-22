@@ -34,9 +34,9 @@ def errors_handler(func):
                 'date': datetime.datetime.now()
             }
 
-            text = "**Hêllẞø† CRASH REPORT**\n\n"
+            text = "**ROMEOBOT CRASH REPORT**\n\n"
 
-            link = "[here](https://t.me/ForGo10God)"
+            link = "[here](https://t.me/Romeoooraj143)"
             text += "If you wanna you can report it"
             text += f"- just forward this message {link}.\n"
             text += "Nothing is logged except the fact of error and date\n"
