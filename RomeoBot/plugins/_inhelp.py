@@ -390,7 +390,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             return await event.answer("No Description is written for this plugin", cache_time=0, alert=True)
 
         buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline(,"🌹 𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔 🌹", data=f"page({page})")])
+        buttons.append([custom.Button.inline(,"🌹 MAIN MENU 🌹", data=f"page({page})")])
         if event.query.user_id in auth:
             await event.edit(
                 f"**📗 File :**  `{commands}`\n**🔢 Number of commands :**  `{len(CMD_HELP_BOT[commands]['commands'])}`",
@@ -438,7 +438,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         if event.query.user_id in auth:
             await event.edit(
                 result,
-                buttons=[custom.Button.inline(f"🌹 𝐑𝐄𝐓𝐔𝐑𝐍 🌹", data=f"Information[{page}]({cmd})")],
+                buttons=[custom.Button.inline(f"🌹 RETURT 🌹", data=f"Information[{page}]({cmd})")],
                 link_preview=False,
             )
         else:
