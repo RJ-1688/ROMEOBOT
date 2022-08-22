@@ -256,6 +256,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
     async def on_pm_click(event):
         auth = await clients_list()
+        event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
         if event.query.user_id in auth:
             reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬..."
         else:
@@ -266,6 +267,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
     async def on_pm_click(event):
         auth = await clients_list()
+        event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
         if event.query.user_id in auth:
             reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
@@ -284,6 +286,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             fck_bit = f"Oh! C'mon Master.This Is for other users"
             await event.answer(fck_bit, cache_time=0, alert=True)
         else:
+            event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
             await event.edit(
                 f"✅ **Request Registered** \n\n{event_mention} will now decide to talk with u or not\n😐 Till then wait patiently and don't spam!!"
             )
@@ -302,6 +305,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             fck_bit = f"This Is For Other user"
             await event.answer(fck_bit, cache_time=0, alert=True)
         else:
+            event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
             await event.edit(
                 f"✅ **Request Registered** \n\n{event_mention} will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam!!"
             )
@@ -321,6 +325,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             reply_pop_up_alert = "This is for other users!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
+            event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
             await event.edit(
                 f"Ahh!! You here to do chit-chat!!\n\nPlease wait for {event_mention} to come. Till then keep patience and don't spam."
             )
