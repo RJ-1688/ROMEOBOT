@@ -348,18 +348,19 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
-    async def on_pm_click(legend):
-        if legend.query.user_id == bot.uid:
-            fck_bit = f"Oh! C'mon Master{legend_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
-            await legend.answer(fck_bit, cache_time=0, alert=True)
+    async def on_pm_click(event):
+        if event.query.user_id == bot.uid:
+            event_mention = f"[{bot.me.first_name}](tg://user?id={bot.uid})"
+            fck_bit = f"Oh! C'mon Master{event_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+            await event.answer(fck_bit, cache_time=0, alert=True)
             return
-        await legend.get_chat()
-        legend_id = legend.query.user_id
-        await legend.edit("Okay let Me Think🤫")
+        await event.get_chat()
+        event_id = event.query.user_id
+        await event.edit("Okay let Me Think🤫")
         await asyncio.sleep(2)
-        await legend.edit("Okay Giving You A Chance🤨")
+        await event.edit("Okay Giving You A Chance🤨")
         await asyncio.sleep(2)
-        await legend.edit(
+        await event.edit(
             "Will You Spam?",
             buttons=[
                 [Button.inline("Yes", data="lemme_ban")],
@@ -369,7 +370,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
         reqws = "`Warning`- ❗️⚠️Don't send any message now wait kindly!!!❗️⚠️"
 
-        await bot.send_message(legend.query.user_id, reqws)
+        await bot.send_message(event.query.user_id, reqws)
         await bot.send_message(
             LOG_GP,
             message=f"Hello, Master  [Nibba](tg://user?id={legend_id}). Wants To Request Something.",
@@ -378,69 +379,69 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"hmm")))
-    async def yes_ucan(legend):
-        if legend.query.user_id == bot.uid:
+    async def yes_ucan(event):
+        if event.query.user_id == bot.uid:
             lmaoo = "You Are Not Requesting , Lol."
-            await legend.answer(lmaoo, cache_time=0, alert=True)
+            await event.answer(lmaoo, cache_time=0, alert=True)
             return
-        await legend.get_chat()
+        await event.get_chat()
         await asyncio.sleep(2)
-        legend.query.user_id
-        await legend.edit("Okay You Can Wait Till Wait")
+        event.query.user_id
+        await event.edit("Okay You Can Wait Till Wait")
         hmmmmm = "Okay Kindly wait  i will inform you"
-        await bot.send_message(legend.query.user_id, hmmmmm)
+        await bot.send_message(event.query.user_id, hmmmmm)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lemme_ban")))
-    async def yes_ucan(legend):
-        if legend.query.user_id == bot.uid:
+    async def yes_ucan(event):
+        if event.query.user_id == bot.uid:
             lmaoo = "You Are Not Requesting , Lol."
-            await legend.answer(lmaoo, cache_time=0, alert=True)
+            await event.answer(lmaoo, cache_time=0, alert=True)
             return
-        await legend.get_chat()
+        await event.get_chat()
         await asyncio.sleep(2)
-        legend_id = legend.query.user_id
+        event_id = event.query.user_id
         await legend.edit("Get Lost Retard")
         ban = f"Pahli Fursat Me Nikal\nU Are Blocked"
-        await bot.send_message(legend.query.user_id, ban)
-        await bot(functions.contacts.BlockRequest(legend.query.user_id))
+        await bot.send_message(event.query.user_id, ban)
+        await bot(functions.contacts.BlockRequest(event.query.user_id))
         await bot.send_message(
             LOG_GP,
-            message=f"Hello, Master  [Nibba](tg://user?id={legend_id}). Has Been Blocked Due to Choose Spam",
-            buttons=[Button.url("Contact Him", f"tg://user?id=legend_id")],
+            message=f"Hello, Master  [Nibba](tg://user?id={event_id}). Has Been Blocked Due to Choose Spam",
+            buttons=[Button.url("Contact Him", f"tg://user?id=event_id")],
         )
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lemme_ban")))
-    async def yes_ucan(legend):
-        if legend.query.user_id == bot.uid:
+    async def yes_ucan(event):
+        if event.query.user_id == bot.uid:
             lmaoo = "You Are Not Requesting , Lol."
-            await legend.answer(lmaoo, cache_time=0, alert=True)
+            await event.answer(lmaoo, cache_time=0, alert=True)
             return
-        await legend.get_chat()
+        await event.get_chat()
         await asyncio.sleep(2)
-        legend_id = legend.query.user_id
-        await legend.edit("Get Lost Retard")
+        event_id = event.query.user_id
+        await event.edit("Get Lost Retard")
         ban = f"Pahli Fursat Me Nikal\nU Are Blocked"
-        await bot.send_message(legend.query.user_id, ban)
-        await bot(functions.contacts.BlockRequest(legend.query.user_id))
+        await bot.send_message(event.query.user_id, ban)
+        await bot(functions.contacts.BlockRequest(event.query.user_id))
         await bot.send_message(
             LOG_GP,
-            message=f"Hello, Master  [Nibba](tg://user?id={legend_id}). Has Been Blocked Due to Choose Spam",
-            buttons=[Button.url("Contact Him", f"tg://user?id=legend_id")],
+            message=f"Hello, Master  [Nibba](tg://user?id={event_id}). Has Been Blocked Due to Choose Spam",
+            buttons=[Button.url("Contact Him", f"tg://user?id=event_id")],
         )
 
    
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
     async def on_pm_click(event):
-        hunter = (event.data_match.group(2)).decode("UTF-8")
-        legend = hunter.split("+")
-        if not event.sender_id == int(legend[0]):
+        raj = (event.data_match.group(2)).decode("UTF-8")
+        romeo = raj.split("+")
+        if not event.sender_id == int(romeo[0]):
             return await event.answer("This Ain't For You!!", alert=True)
         try:
-            await bot(GetParticipantRequest(int(legend[1]), int(legend[0])))
+            await bot(GetParticipantRequest(int(romeo[1]), int(romeo[0])))
         except UserNotParticipantError:
             return await event.answer("You need to join the channel first.", alert=True)
         await bot.edit_permissions(
-            event.chat_id, int(legend[0]), send_message=True, until_date=None
+            event.chat_id, int(romeo[0]), send_message=True, until_date=None
         )
         await event.edit("Yay! You can chat now !!")
 
