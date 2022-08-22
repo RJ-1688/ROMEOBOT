@@ -70,23 +70,14 @@ async def start_RomeoBot():
         C5 = await hells(Config.SESSION_5, H5, "SESSION_5")
         await tbot.start()
         total = C1 + C2 + C3 + C4 + C5
-        LOGS.info("╔════{𝕽𝖔𝖒𝖊𝖔𝕭𝖔𝖙}═❍⊱❁")
-        LOGS.info("║┣⪼ 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠... 𝐑𝐨𝐦𝐫𝐨𝐁𝐨𝐭")
-        LOGS.info("║┣⪼ 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠.. 𝐋𝐨𝐚𝐝𝐢𝐧𝐠..")
-        LOGS.info("╚══════════════════❍⊱")
+        LOGS.info("❥︎𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭")
+        LOGS.info("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠..")
+        LOGS.info("𝐋𝐨𝐚𝐝𝐢𝐧𝐠...")
         await plug_load("RomeoBot/plugins/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
-        LOGS.info(f"""🇷 𝐎𝐌𝐄𝐎...➙𖤍࿐ IS ON!!! ROMEO USERBOT VERSION :- 𝕍:𝕒 𝟙.𝟘
-                      TYPE :- " .gpromote @Romeoooraj143" OR .help OR .ping CHECK IF I'M ON!
-                      ╔════❰ ROMEO USERBOT ❱═❍⊱❁
-                      ║┣⪼ OWNER - 𝕾🅡︎🅐︎🅙︎𝕾
-                      ║┣⪼ Ultra Real Stick Bot 
-                      ║┣⪼ CREATOR -𝕾🅡︎🅐︎🅙︎𝕾
-                      ║┣⪼ TELETHON - 1.0
-                      ║┣⪼ ✨ 𝕽𝖔𝖒𝖊𝖔 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 ✨
-                      ║╰━━━━━━━━━━━━━━━➣
-                      ╚══════════════════❍⊱""")
-        LOGS.info(f"» Total Clients = {str(total)} «")
+        LOGS.info(f"""
+                   🇷𝐎𝐌𝐄𝐎 𝐎𝐍 𝐅𝐈𝐑𝐄             
+                   🇻𝐄𝐑𝐒𝐈𝐎𝐍 ❥︎ 1.0""")                     LOGS.info(f"» Total Clients = {str(total)} «")
         await hell_is_on(total)
     except Exception as e:
         LOGS.error(f"{str(e)}")
@@ -103,5 +94,3 @@ else:
     except ConnectionError:
         pass
 
-
-# RomeoBot
