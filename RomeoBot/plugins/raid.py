@@ -351,62 +351,73 @@ async def spam(e):
 
 
 @hell_cmd(pattern="replyraid(?:\s|$)([\s\S]*)")
-async def _(event):
-    global que
-    if event.fwd_from:
+async def replyramd(client: Client, message: Message):
+    Kaal = await message.reply_text("`Processing..`")
+    text_ = get_text(message)
+    user, reason = get_user(message, text_)
+    failed = 0
+    if not user:
+        await Kaal.edit("`Reply To User Or Mention To Activate Replyraid `")
         return
-    if event.reply_to_msg_id:
-        a = await event.get_reply_message()
-        b = await event.client.get_entity(a.sender_id)
-        e = b.id
-        c = b.first_name
-        username = f"[{c}](tg://user?id={e})"
-        event = await edit_or_reply(event, "Activating Reply Raid")
-        que[e] = []
-        qeue = que.get(e)
-        appendable = [e]
-        qeue.append(appendable)
-        await event.edit(f"STARTING RAID BY {ALIVE_NAME}")
-    else:
-        user = event.pattern_match.group(1)
-        event = await edit_or_reply(event, "REPLY TO USER")
-        a = await event.client.get_entity(user)
-        e = a.id
-        c = a.first_name
-        username = f"[{c}](tg://user?id={e})"
-        que[e] = []
-        qeue = que.get(e)
-        appendable = [e]
-        qeue.append(appendable)
-        await event.edit(f"Started Raid")
-
+    try:
+        userz = await client.get_users(user)
+    except:
+        await Kaal.edit(f"`404 : User Doesn't Exists In This Chat !`")
+        return
+    if not reason:
+        reason = "Private Reason!"
+    mee= await client.get_me()
+    if userz.id == mee.id:
+        await Kaal.edit("`Jaa Na Lawde Kahe Dimag Kha rha? Khudpe Raid kyu laga rha?`")
+        return
+    if await kaalub_info(userz.id):
+        await Kaal.edit("`Who So Noob? Reply Raid Already Activated on that User:/`")
+        return
+    if int(userz.id) in SUDO_USERS:
+        await Kaal.edit("Abe Lawde that guy part of my devs.")
+        return
+    await Kaal.edit("`Please, Wait Fectching Using Details!`")
+    chat_dict = await iter_chats(client)
+    chat_len = len(chat_dict)
+    if not chat_dict:
+        Kaal.edit("`You Have No Chats! So Sad`")
+        return
+    await Kaal.edit("`Activating Replyraid....!`")
+    await rkaal(userz.id, reason)
+    gbanned = f"Reply Raid has Been Activated On {userz.first_name}"
+    await Kaal.edit(gbanned)
 
 @hell_cmd(pattern="dreplyraid(?:\s|$)([\s\S]*)")
-async def _(event):
-    global que
-    if event.fwd_from:
+async def dreplyramd(client: Client, message: Message):
+    Kaal = await message.reply_text("`Processing..`")
+    text_ = get_text(message)
+    user = get_user(message, text_)[0]
+    failed = 0
+    if not user:
+        await Kaal.edit("`Reply To User Or Mention To Deactivate Replyraid`")
         return
-    if event.reply_to_msg_id:
-        a = await event.get_reply_message()
-        b = await event.client.get_entity(a.sender_id)
-        e = b.id
-        c = b.first_name
-        username = f"[{c}](tg://user?id={e})"
-        event = await edit_or_reply(event, "Raid is Stoping")
-        queue = que.get(e)
-        queue.pop(0)
-        await event.edit(f"{ALIVE_NAME} HAS STOPED RAID NOW U ARE FREE AS BIRD")
-    else:
-        user = event.pattern_match.group(1)
-        event = await edit_or_reply(event, "Reply to user to stop RAID")
-        a = await event.client.get_entity(user)
-        e = a.id
-        c = a.first_name
-        username = f"[{c}](tg://user?id={e})"
-        queue = que.get(e)
-        queue.pop(0)
-        await event.edit(f"STOPPING RAID BY {ALIVE_NAME}")
-
+    try:
+        userz = await client.get_users(user)
+    except:
+        await Kaal.edit(f"`404 : User Doesn't Exists!`")
+        return
+    mee= await client.get_me()
+    if userz.id == mee.id:
+        await Kaal.edit("`Soja Lomde`")
+        return
+    if not await kaalub_info(userz.id):
+        await Kaal.edit("`When I Replyraid Activated? On That User?:/`")
+        return
+    await Kaal.edit("`Please, Wait Fectching User details!`")
+    chat_dict = await iter_chats(client)
+    chat_len = len(chat_dict)
+    if not chat_dict:
+        Kaal.edit("`You Have No Chats! So Sad`")
+        return
+    await Kaal.edit("`De-Activating Replyraid Raid....!`")
+    await runkaal(userz.id)
+    ungbanned = f"**De-activated Replyraid Raid [{userz.first_name}](tg://user?id={userz.id})"
+    await Kaal.edit(ungbanned)
 
 from RomeoBot.cmdhelp import CmdHelp
 
