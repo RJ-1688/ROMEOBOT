@@ -279,17 +279,17 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"tg_okay")))
-    async def yeahbaba(legend):
-        if legend.query.user_id == bot.uid:
+    async def yeahbaba(event):
+        if event.query.user_id == bot.uid:
             fck_bit = f"Oh! C'mon Master.This Is for other users"
-            await legend.answer(fck_bit, cache_time=0, alert=True)
+            await event.answer(fck_bit, cache_time=0, alert=True)
         else:
-            await legend.edit(
+            await event.edit(
                 f"✅ **Request Registered** \n\n{legend_mention} will now decide to talk with u or not\n😐 Till then wait patiently and don't spam!!"
             )
-            target = await legend.client(GetFullUserRequest(legend.query.user_id))
+            target = await event.client(GetFullUserRequest(event.query.user_id))
             first_name = html.escape(target.user.first_name)
-            ok = legend.query.user_id
+            ok = event.query.user_id
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
                 tosend = f"**👀 Hey {legend_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
@@ -297,17 +297,17 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
      
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"school")))
-    async def yeahbaba(legend):
-        if legend.query.user_id == bot.uid:
+    async def yeahbaba(event):
+        if event.query.user_id == bot.uid:
             fck_bit = f"This Is For Other user"
-            await legend.answer(fck_bit, cache_time=0, alert=True)
+            await event.answer(fck_bit, cache_time=0, alert=True)
         else:
-            await legend.edit(
+            await event.edit(
                 f"✅ **Request Registered** \n\n{legend_mention} will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam!!"
             )
-            target = await legend.client(GetFullUserRequest(legend.query.user_id))
+            target = await event.client(GetFullUserRequest(event.query.user_id))
             first_name = html.escape(target.user.first_name)
-            ok = legend.query.user_id
+            ok = event.query.user_id
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
             tosend = f"**👀 Hey {legend_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
