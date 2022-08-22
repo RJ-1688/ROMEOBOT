@@ -123,7 +123,7 @@ CmdHelp("spam").add_command(
 ).add_command(
   "bspam", "<count> <text or reply>", "Spams the message X times without floodwait. Breaks the spam count to avoid floodwait.", "bspam 9999 Hello"
 ).add_command(
-  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what UltronBot iz known for. The Best BigSpam Ever", "bigspam 9999 Hello"
+  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what RomeoBot iz known for. The Best BigSpam Ever", "bigspam 9999 Hello"
 ).add_info(
   "Spammers Commands"
 ).add_warning(
