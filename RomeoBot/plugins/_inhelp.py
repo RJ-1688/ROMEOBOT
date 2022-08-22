@@ -21,7 +21,7 @@ from RomeoBot.sql.gvar_sql import gvarstat
 from . import *
 
 hell_row = 12
-hell_emoji = 🔥
+hell_emoji = Config.EMOJI_IN_HELP
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
@@ -224,9 +224,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ 𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭 ⚡**",
+                text=f"**🌹 𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭 🌹**",
                 buttons=[
-                    [Button.url("🌹 𝕽𝖔𝖒𝖊𝖔 🌹", "https://t.me/Bot_Updates_Chnl")],
+                    [Button.url("🌹 𝐆𝐑𝐎𝐔𝐏 🌹", "https://t.me/Bot_Updates_Chnl")],
                 ],
             )
 
@@ -245,7 +245,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text="""**𝐇𝐞𝐲 𝐓𝐡𝐢𝐬 𝐢𝐬 [𝐑𝐨𝐦𝐞𝐨𝐁𝐨𝐭](https://t.me/Bot_Support_Grp)**""",
                 buttons=[
                     [
-                        custom.Button.url("🔰 𝐑𝐨𝐦𝐞𝐨_𝐒𝐭𝐫𝐢𝐧𝐠 🔰", "https://t.me/Rjssgbot"),
+                        custom.Button.url("🌹 𝐑𝐨𝐦𝐞𝐨_𝐒𝐭𝐫𝐢𝐧𝐠 🌹", "https://t.me/Rjssgbot"),
                     ],
                 ],
                 link_preview=False,
@@ -390,7 +390,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             return await event.answer("No Description is written for this plugin", cache_time=0, alert=True)
 
         buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline(f"{hell_emoji} Main Menu {hell_emoji}", data=f"page({page})")])
+        buttons.append([custom.Button.inline(,"🔥 Main Menu 🔥", data=f"page({page})")])
         if event.query.user_id in auth:
             await event.edit(
                 f"**📗 File :**  `{commands}`\n**🔢 Number of commands :**  `{len(CMD_HELP_BOT[commands]['commands'])}`",
