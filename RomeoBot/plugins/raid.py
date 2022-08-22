@@ -605,7 +605,7 @@ async def spam(j):
         counter = int(legend[0])
         username = f"[{c}](tg://user?id={g})"
         for _ in range(counter):
-            reply = random.choice(LOVE)
+            reply = random.choice(PORM)
             caption = f"{username} {reply}"
             async with j.client.action(j.chat_id, "typing"):
                 await j.client.send_message(j.chat_id, caption)
