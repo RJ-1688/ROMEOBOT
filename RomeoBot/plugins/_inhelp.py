@@ -20,8 +20,8 @@ from telethon.tl.functions.messages import ExportChatInviteRequest
 from RomeoBot.sql.gvar_sql import gvarstat
 from . import *
 
-hell_row = Config.BUTTONS_IN_HELP
-hell_emoji = Config.EMOJI_IN_HELP
+hell_row = 12
+hell_emoji = 🔥
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
@@ -383,7 +383,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         commands = event.data_match.group(2).decode("UTF-8")
         try:
             buttons = [
-                custom.Button.inline("⚡ " + cmd[0] + " ⚡", data=f"commands[{commands}[{page}]]({cmd[0]})")
+                custom.Button.inline("🌹 " + cmd[0] + " 🌹", data=f"commands[{commands}[{page}]]({cmd[0]})")
                 for cmd in CMD_HELP_BOT[commands]["commands"].items()
             ]
         except KeyError:
