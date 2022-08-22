@@ -350,74 +350,74 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@hell_cmd(pattern="replyraid(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="rr(?:\s|$)([\s\S]*)")
 async def replyramd(client: Client, message: Message):
-    Kaal = await message.reply_text("`Processing..`")
+    R = await message.reply_text(RAID)
     text_ = get_text(message)
     user, reason = get_user(message, text_)
     failed = 0
     if not user:
-        await Kaal.edit("`Reply To User Or Mention To Activate Replyraid `")
+        await R.edit("`Reply To User Or Mention To Activate Replyraid `")
         return
     try:
         userz = await client.get_users(user)
     except:
-        await Kaal.edit(f"`404 : User Doesn't Exists In This Chat !`")
+        await R.edit(f"`404 : User Doesn't Exists In This Chat !`")
         return
     if not reason:
         reason = "Private Reason!"
     mee= await client.get_me()
     if userz.id == mee.id:
-        await Kaal.edit("`Jaa Na Lawde Kahe Dimag Kha rha? Khudpe Raid kyu laga rha?`")
+        await R.edit("`Jaa Na Lawde Kahe Dimag Kha rha? Khudpe Raid kyu laga rha?`")
         return
     if await kaalub_info(userz.id):
-        await Kaal.edit("`Who So Noob? Reply Raid Already Activated on that User:/`")
+        await R.edit("`Who So Noob? Reply Raid Already Activated on that User:/`")
         return
     if int(userz.id) in SUDO_USERS:
-        await Kaal.edit("Abe Lawde that guy part of my devs.")
+        await R.edit("Abe Lawde that guy part of my devs.")
         return
-    await Kaal.edit("`Please, Wait Fectching Using Details!`")
+    await R.edit("`Please, Wait Fectching Using Details!`")
     chat_dict = await iter_chats(client)
     chat_len = len(chat_dict)
     if not chat_dict:
-        Kaal.edit("`You Have No Chats! So Sad`")
+        R.edit("`You Have No Chats! So Sad`")
         return
-    await Kaal.edit("`Activating Replyraid....!`")
-    await rkaal(userz.id, reason)
+    await R.edit("`Activating Replyraid....!`")
+    await runr(userz.id, reason)
     gbanned = f"Reply Raid has Been Activated On {userz.first_name}"
-    await Kaal.edit(gbanned)
+    await R.edit(gbanned)
 
-@hell_cmd(pattern="dreplyraid(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="dr(?:\s|$)([\s\S]*)")
 async def dreplyramd(client: Client, message: Message):
-    Kaal = await message.reply_text("`Processing..`")
+    R = await message.reply_text(RAID)
     text_ = get_text(message)
     user = get_user(message, text_)[0]
     failed = 0
     if not user:
-        await Kaal.edit("`Reply To User Or Mention To Deactivate Replyraid`")
+        await R.edit("`Reply To User Or Mention To Deactivate Replyraid`")
         return
     try:
         userz = await client.get_users(user)
     except:
-        await Kaal.edit(f"`404 : User Doesn't Exists!`")
+        await R.edit(f"`404 : User Doesn't Exists!`")
         return
     mee= await client.get_me()
     if userz.id == mee.id:
-        await Kaal.edit("`Soja Lomde`")
+        await R.edit("`Soja Lomde`")
         return
     if not await kaalub_info(userz.id):
-        await Kaal.edit("`When I Replyraid Activated? On That User?:/`")
+        await R.edit("`When I Replyraid Activated? On That User?:/`")
         return
-    await Kaal.edit("`Please, Wait Fectching User details!`")
+    await R.edit("`Please, Wait Fectching User details!`")
     chat_dict = await iter_chats(client)
     chat_len = len(chat_dict)
     if not chat_dict:
-        Kaal.edit("`You Have No Chats! So Sad`")
+        R.edit("`You Have No Chats! So Sad`")
         return
-    await Kaal.edit("`De-Activating Replyraid Raid....!`")
-    await runkaal(userz.id)
+    await R.edit("`De-Activating Replyraid Raid....!`")
+    await runr(userz.id)
     ungbanned = f"**De-activated Replyraid Raid [{userz.first_name}](tg://user?id={userz.id})"
-    await Kaal.edit(ungbanned)
+    await R.edit(ungbanned)
 
 from RomeoBot.cmdhelp import CmdHelp
 
@@ -426,8 +426,8 @@ CmdHelp("raid").add_command(
     "<Reply to a User With Number>",
     "Use and see",
     ".raid 10 reply to anyone message",
-).add_command("replyraid", None, "Reply to him or her to start raid").add_command(
-    "dreplyraid", None, "Reply To her Ya him To stop raid"
+).add_command("rr", None, "Reply to him or her to start raid").add_command(
+    "dr", None, "Reply To her Ya him To stop raid"
 ).add_type(
     "Addons"
 ).add()
