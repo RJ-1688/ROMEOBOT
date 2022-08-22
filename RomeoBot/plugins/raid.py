@@ -307,7 +307,12 @@ RAID = [
     "TERI SEXY BAHEN KI CHUT OP",
 ]
 
-@hell_cmd(incoming=True)
+
+que = {}
+
+
+@bot.on(admin_cmd(incoming=True))
+@bot.on(sudo_cmd(incoming=True, allow_sudo=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -318,14 +323,13 @@ async def _(event):
     async with event.client.action(event.chat_id, "typing"):
         await event.client.send_message(
             entity=event.chat_id,
-            message="""{}""".format(random.choice(MEDHU)),
+            message="""{}""".format(random.choice(RAID)),
             reply_to=event.message.id,
         )
 
-que = {}
 
-
-@hell_cmd(pattern="raid(?:\s|$)([\s\S]*)")
+@bot.on(admin_cmd(pattern="raid(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="raid(?: |$)(.*)", allow_sudo=True))
 async def spam(e):
     if e.fwd_from:
         return
@@ -348,7 +352,8 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@hell_cmd(pattern="replyraid(?:\s|$)([\s\S]*)")
+@bot.on(admin_cmd(pattern="replyraid(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="replyraid(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
@@ -379,7 +384,8 @@ async def _(event):
         await event.edit(f"Started Raid")
 
 
-@hell_cmd(pattern="dreplyraid(?:\s|$)([\s\S]*)")
+@bot.on(admin_cmd(pattern="dreplyraid(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="dreplyraid(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
