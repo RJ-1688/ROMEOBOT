@@ -31,6 +31,7 @@ if mybot.startswith("@"):
 else:
     botname = f"@{mybot}"
 LOG_GP = Config.LOGGER_ID
+TOTAL_WARN = Config.MAX_FLOOD_IN_PM
 USER_BOT_WARN_ZERO = "𝐎𝐲𝐞 𝐛𝐬𝐬𝐬 𝐤𝐚𝐫 𝐛𝐨𝐥𝐚 𝐧 𝐬𝐩𝐚𝐦 𝐧𝐡𝐢 𝐰𝐚𝐫𝐧𝐚 𝐛𝐥𝐨𝐜𝐡 𝐡𝐨𝐠𝐞"
 
 alive_txt = """{}\n
