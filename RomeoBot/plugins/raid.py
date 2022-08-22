@@ -382,6 +382,4 @@ CmdHelp("raid").add_command(
     "Use and see",
     ".raid 10 reply to anyone message",
 ).add_command("rr", None, "Reply to him or her to start raid")
-).add_type(
-    "Addons"
 ).add()
