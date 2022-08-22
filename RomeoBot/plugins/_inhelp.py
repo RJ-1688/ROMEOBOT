@@ -278,6 +278,61 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await tbot.send_message(LOG_GP, f"𝐡𝐞𝐲 \n\n⚜️ 𝐘𝐨𝐮 𝐠𝐨𝐭 𝐚 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 [{first_name}](tg://user?id={event.query.user_id}) !")
 
 
+    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"tg_okay")))
+    async def yeahbaba(legend):
+        if legend.query.user_id == bot.uid:
+            fck_bit = f"Oh! C'mon Master.This Is for other users"
+            await legend.answer(fck_bit, cache_time=0, alert=True)
+        else:
+            await legend.edit(
+                f"✅ **Request Registered** \n\n{legend_mention} will now decide to talk with u or not\n😐 Till then wait patiently and don't spam!!"
+            )
+            target = await legend.client(GetFullUserRequest(legend.query.user_id))
+            first_name = html.escape(target.user.first_name)
+            ok = legend.query.user_id
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+                tosend = f"**👀 Hey {legend_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
+                await bot.send_message(LOG_GP, tosend)
+
+     
+    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"school")))
+    async def yeahbaba(legend):
+        if legend.query.user_id == bot.uid:
+            fck_bit = f"This Is For Other user"
+            await legend.answer(fck_bit, cache_time=0, alert=True)
+        else:
+            await legend.edit(
+                f"✅ **Request Registered** \n\n{legend_mention} will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam!!"
+            )
+            target = await legend.client(GetFullUserRequest(legend.query.user_id))
+            first_name = html.escape(target.user.first_name)
+            ok = legend.query.user_id
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            tosend = f"**👀 Hey {legend_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
+            await bot.send_message(LOG_GP, tosend)
+ 
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"chat")))
+    async def on_pm_click(event):
+        event.query.user_id
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for other users!"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"Ahh!! You here to do chit-chat!!\n\nPlease wait for {legend_mention} to come. Till then keep patience and don't spam."
+            )
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            ok = event.query.user_id
+            first_name = html.escape(target.user.first_name)
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            tosend = f"**👀 Hey {legend_mention} !!** \n\n⚜️ You Got A PM from  [{first_name}](tg://user?id={ok})  for random chats!!"
+            await bot.send_message(LOG_GP, tosend)
+
+
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
     async def on_pm_click(event):
         auth = await clients_list()
