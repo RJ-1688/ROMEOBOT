@@ -351,73 +351,30 @@ async def spam(e):
 
 
 @hell_cmd(pattern="rr(?:\s|$)([\s\S]*)")
-async def _(client: Client, message: Message):
-    R = await message.reply_text(RAID)
-    text_ = get_text(message)
-    user, reason = get_user(message, text_)
-    failed = 0
-    if not user:
-        await R.edit("`Reply To User Or Mention To Activate Replyraid `")
+async def spam(e):
+    if e.fwd_from:
         return
-    try:
-        userz = await client.get_users(user)
-    except:
-        await R.edit(f"`404 : User Doesn't Exists In This Chat !`")
-        return
-    if not reason:
-        reason = "Private Reason!"
-    mee= await client.get_me()
-    if userz.id == mee.id:
-        await R.edit("`Jaa Na Lawde Kahe Dimag Kha rha? Khudpe Raid kyu laga rha?`")
-        return
-    if await kaalub_info(userz.id):
-        await R.edit("`Who So Noob? Reply Raid Already Activated on that User:/`")
-        return
-    if int(userz.id) in SUDO_USERS:
-        await R.edit("Abe Lawde that guy part of my devs.")
-        return
-    await R.edit("`Please, Wait Fectching Using Details!`")
-    chat_dict = await iter_chats(client)
-    chat_len = len(chat_dict)
-    if not chat_dict:
-        R.edit("`You Have No Chats! So Sad`")
-        return
-    await R.edit("`Activating Replyraid....!`")
-    await runr(userz.id, reason)
-    gbanned = f"Reply Raid has Been Activated On {userz.first_name}"
-    await R.edit(gbanned)
+    legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+    await e.get_reply_message()
+    if e.reply_to_msg_id:
+        a = await e.get_reply_message()
+        b = await e.client.get_entity(a.sender_id)
+        g = b.id
+        c = b.first_name
+        counter = int(legend[0])
+        username = f"[{c}](tg://user?id={g})"
+        for _ in range(counter):
+            reply = random.choice(RAID)
+            caption = f"{username} {reply}"
+            async with e.client.action(e.chat_id, "typing"):
+                await e.client.send_message(e.chat_id, caption)
+                await asyncio.sleep(0.3)
+    else:
+        await e.reply(usage, parse_mode=None, link_preview=None)
+
 
 @hell_cmd(pattern="dr(?:\s|$)([\s\S]*)")
-async def _(client: Client, message: Message):
-    R = await message.reply_text(RAID)
-    text_ = get_text(message)
-    user = get_user(message, text_)[0]
-    failed = 0
-    if not user:
-        await R.edit("`Reply To User Or Mention To Deactivate Replyraid`")
-        return
-    try:
-        userz = await client.get_users(user)
-    except:
-        await R.edit(f"`404 : User Doesn't Exists!`")
-        return
-    mee= await client.get_me()
-    if userz.id == mee.id:
-        await R.edit("`Soja Lomde`")
-        return
-    if not await rub_info(userz.id):
-        await R.edit("`When I Replyraid Activated? On That User?:/`")
-        return
-    await R.edit("`Please, Wait Fectching User details!`")
-    chat_dict = await iter_chats(client)
-    chat_len = len(chat_dict)
-    if not chat_dict:
-        R.edit("`You Have No Chats! So Sad`")
-        return
-    await R.edit("`De-Activating Replyraid Raid....!`")
-    await runr(userz.id)
-    ungbanned = f"**De-activated Replyraid Raid [{userz.first_name}](tg://user?id={userz.id})"
-    await R.edit(ungbanned)
+
 
 from RomeoBot.cmdhelp import CmdHelp
 
