@@ -530,7 +530,7 @@ LOVE = [
 que = {}
 
 
-@hell_cmd(incoming=True)
+@bot.on(admin_cmd(incoming=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -546,7 +546,7 @@ async def _(event):
         )
 
 
-@hell_cmd(pattern="raid(?:\s|$)([\s\S]*)")
+@bot.on(admin_cmd(pattern="raid(?:\s|$)([\s\S]*)"))
 async def spam(e):
     if e.fwd_from:
         return
@@ -569,7 +569,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@hell_cmd(pattern="lr(?:\s|$)([\s\S]*)")
+@bot.on(admin_cmd(pattern="lr(?:\s|$)([\s\S]*)"))
 async def spam(r):
     if r.fwd_from:
         return
@@ -592,7 +592,7 @@ async def spam(r):
         await r.reply(usage, parse_mode=None, link_preview=None)
 
 
-@hell_cmd(pattern="psm(?:\s|$)([\s\S]*)")
+@bot.on(admin_cmd(pattern="psm(?:\s|$)([\s\S]*)"))
 async def spam(j):
     if j.fwd_from:
         return
