@@ -49,7 +49,7 @@ MEDHU = [
 que = {}
 
 
-@hell_cmd(incoming=True)
+@@bot.on(admin_cmd(incoming=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -65,7 +65,7 @@ async def _(event):
         )
 
 
-@hell_cmd(pattern="lxlove(?:\s|$)([\s\S]*)")
+@@bot.on(admin_cmd(pattern="lxlove(?:\s|$)([\s\S]*)"))
 async def _(event):
     global que
     if event.fwd_from:
