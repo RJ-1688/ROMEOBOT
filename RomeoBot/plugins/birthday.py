@@ -32,7 +32,7 @@ async def _(event):
         "[For You](http://i.pinimg.com/originals/10/b8/fb/10b8fb15270d8db1f6ff967e7026d2de.gif)",
         "[For You](http://www.lovethispic.com/uploaded_images/367867-Starry-Happy-Birthday-Gif.gif)",
     ]
-    for i in animation_ttl:  # By @NOOB_GUY_OP for Dark CObra
+    for i in animation_ttl:
 
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 17], link_preview=True)
