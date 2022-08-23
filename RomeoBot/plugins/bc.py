@@ -171,7 +171,7 @@ async def yashraid(event):
         await ROMEO.send_message(kek, "KOOO CHOOOOOOODDDDD KRRR CHOD DIYAA GANDUUU")
         await ROMEO.send_message(
             kek,
-            "TELEGRAM ME RAHNA HAI TO MUJHKOKO PAPA BOLNA PAREGA WARNA TUMHARII BHN XUDEGI AISE HI ROJ",
+            "TELEGRAM ME RAHNA HAI TO MUJHKO PAPA BOLNA PAREGA WARNA TUMHARII BHN XUDEGI AISE HI ROJ",
         )
 
 
