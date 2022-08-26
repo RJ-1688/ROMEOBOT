@@ -51,7 +51,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"✮" + pair + f"✮", data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"ㅤ✮ㅤ" + pair + f"ㅤ✮ㅤ", data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
@@ -173,7 +173,53 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     parse_mode="HTML",
                 )
 
-        
+        elif event.query.user_id in auth and query == "pm_warn":
+            CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "𝐊𝐲𝐚 𝐤𝐚𝐚𝐦 𝐇"
+            HELL_FIRST = "𝐇𝐞𝐥𝐥𝐨 \n   𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 {}'𝐬 𝐩𝐦\n\n 😎 𝐃𝐨𝐧𝐭'𝐧 𝐓𝐫𝐲 𝐓𝐨 𝐒𝐩𝐚𝐦 𝐇𝐞𝐫𝐞 😎".format(hell_mention, CSTM_PMP)
+            a = gvarstat("PMPERMIT_PIC")
+            pic_list = []
+            if a:
+                b = a.split(" ")
+                if len(b) >= 1:
+                    for c in b:
+                        pic_list.append(c)
+                PIC = random.choice(pic_list)
+            else:
+                PIC = "https://telegra.ph/file/a62b9c7d9848afde0569e.jpg"
+            if PIC and PIC.endswith((".jpg", ".png")):
+                result = builder.photo(
+                    file=PIC,
+                    text=HELL_FIRST,
+                    buttons=[
+                        [custom.Button.inline("📝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭", data="req")],
+                        [custom.Button.inline("🚫 𝐁𝐥𝐨𝐜𝐤", data="heheboi")],
+                        [custom.Button.inline("❓ 𝐂𝐮𝐫𝐢𝐨𝐮𝐬", data="pmclick")],
+                    ],
+                    link_preview=False,
+                )
+            elif PIC:
+                result = builder.document(
+                    file=PIC,
+                    text=HELL_FIRST,
+                    title="𝐏𝐦 𝐏𝐞𝐫𝐦𝐢𝐭",
+                    buttons=[
+                        [custom.Button.inline("📝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭", data="req")],
+                        [custom.Button.inline("🚫 𝐁𝐥𝐨𝐜𝐤", data="heheboi")],
+                        [custom.Button.inline("❓ 𝐂𝐮𝐫𝐢𝐨𝐮𝐬", data="pmclick")],
+                    ],
+                    link_preview=False,
+                )
+            else:
+                result = builder.article(
+                    text=HELL_FIRST,
+                    title="𝐏𝐦 𝐏𝐞𝐫𝐦𝐢𝐭",
+                    buttons=[
+                        [custom.Button.inline("📝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭", data="req")],
+                        [custom.Button.inline("🚫 𝐁𝐥𝐨𝐜𝐤", data="heheboi")],
+                        [custom.Button.inline("❓ 𝐂𝐮𝐫𝐢𝐨𝐮𝐬", data="pmclick")],
+                    ],
+                    link_preview=False,
+                )
                 
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
@@ -205,7 +251,48 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         await event.answer([result] if result else None)
-   
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
+    async def on_pm_click(event):
+        auth = await clients_list()
+        if event.query.user_id in auth:
+            reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬..."
+        else:
+            reply_pop_up_alert = "😡𝐃𝐨𝐧'𝐭 𝐬𝐩𝐚𝐦😡"
+        await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
+    async def on_pm_click(event):
+        auth = await clients_list()
+        if event.query.user_id in auth:
+            reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit("✅ **𝐑𝐞𝐪𝐮𝐞𝐬𝐭** \n\n𝐎𝐲𝐞 𝐑𝐮𝐤𝐨 𝐣𝐚𝐥𝐝𝐢 𝐤𝐲𝐚 𝐡\n😐 𝐒𝐩𝐚𝐦 𝐧𝐡𝐢 𝐛𝐨𝐥𝐚 𝐧 ")
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            first_name = html.escape(target.user.first_name)
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            await tbot.send_message(LOG_GP, f"𝐡𝐞𝐲 \n\n⚜️ 𝐘𝐨𝐮 𝐠𝐨𝐭 𝐚 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 [{first_name}](tg://user?id={event.query.user_id}) !")
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
+    async def on_pm_click(event):
+        auth = await clients_list()
+        if event.query.user_id in auth:
+            reply_pop_up_alert = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐟𝐨𝐫 𝐨𝐭𝐡𝐞𝐫 𝐮𝐬𝐞𝐫𝐬"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(f"😡 **𝐁𝐥𝐨𝐜𝐤**")
+            await H1(functions.contacts.BlockRequest(event.query.user_id))
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            first_name = html.escape(target.user.first_name)
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            await tbot.send_message(LOG_GP, f"𝐇𝐨 𝐠𝐲𝐚 𝐧 𝐁𝐥𝐨𝐜𝐤 𝐛𝐨𝐥𝐚 𝐭𝐡𝐚 𝐬𝐩𝐚𝐦 𝐦𝐚𝐚𝐭 𝐤𝐚𝐫\n\n**𝐁𝐥𝐨𝐜𝐤** [{first_name}](tg://user?id={event.query.user_id}) \nℝ𝕖𝕒𝕤𝕠𝕟:- ℙ𝕄 𝕊𝕖𝕝𝕗 𝔹𝕝𝕠𝕔𝕜")
+
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"reopen")))
     async def reopn(event):
@@ -296,7 +383,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         commands = event.data_match.group(2).decode("UTF-8")
         try:
             buttons = [
-                custom.Button.inline("✮" + cmd[0] + "✮", data=f"commands[{commands}[{page}]]({cmd[0]})")
+                custom.Button.inline("ㅤ✮ㅤ" + cmd[0] + "ㅤ✮ㅤ", data=f"commands[{commands}[{page}]]({cmd[0]})")
                 for cmd in CMD_HELP_BOT[commands]["commands"].items()
             ]
         except KeyError:
