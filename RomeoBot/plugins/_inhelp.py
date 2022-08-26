@@ -383,7 +383,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         commands = event.data_match.group(2).decode("UTF-8")
         try:
             buttons = [
-                custom.Button.inline("ㅤ✮" + cmd[0] + "✮ㅤ", data=f"commands[{commands}[{page}]]({cmd[0]})")
+                custom.Button.inline("✮ㅤ" + cmd[0] + "ㅤ✮", data=f"commands[{commands}[{page}]]({cmd[0]})")
                 for cmd in CMD_HELP_BOT[commands]["commands"].items()
             ]
         except KeyError:
