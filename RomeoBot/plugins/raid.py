@@ -434,7 +434,7 @@ async def spam(j):
 from RomeoBot.cmdhelp import CmdHelp
 
 CmdHelp("raid").add_command(
-    "raid",
+    "raid", None,
     "<Reply to a User With Number>",
     "Use and see",
     ".raid 10 reply to anyone message",
