@@ -60,6 +60,6 @@ wget
 wheel
 
 git+https://github.com/Romeo-RJ-143/py-googletrans
-git+https://github.com/Romeo-RJ-143/Wikipedia
+git+https://github.com/Romeo-RJ-143/youtube-dl
 git+https://github.com/Romeo-RJ-143/yt-dp-fork
 git+https://github.com/Romeo-RJ-143/yt-search-python
