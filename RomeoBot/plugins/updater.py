@@ -34,7 +34,7 @@ async def hell_info(UltronBot_info):
     _release = infos['RomeoBot-INFO']['release-date']
     _branch = infos['RomeoBot-INFO']['branch']
     _author = infos['RomeoBot-INFO']['author']
-    _auturl = infos['UltronBot-INFO']['author-url']
+    _auturl = infos['RomeoBot-INFO']['author-url']
     return _version, _release, _branch, _author, _auturl
 
 
@@ -261,7 +261,7 @@ CmdHelp("update").add_command(
 ).add_command(
   "update build", None, "Hard-Update Your RomeoBot. This won't take you back to your previous deploy. This will be triggered even if there is no changelog."
 ).add_info(
-  "Hêllẞø† Updater."
+  "RomeoBot Updater."
 ).add_warning(
   "✅ Harmless Module."
 ).add()
