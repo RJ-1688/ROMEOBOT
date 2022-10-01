@@ -216,7 +216,7 @@ async def _(event):
         gbpic = random.choice(pic_str)
     else:
         gbpic = cjb
-    gmsg = f"🥴 [{name}](tg://user?id={userid}) **beta majdur ko khodna 😪 aur** {hell_mention} **ko chodna... Kabhi sikhana nhi!! 😏**\n\n📍 Added to Gban Watch!!\n**🔰 Total Chats :**  `{chats}`"
+    gmsg = f"[{name}](tg://user?id={userid}) **𝐁𝐞𝐭𝐚 𝐑𝐚𝐡𝐧𝐞 𝐝𝐨 𝐓𝐮𝐦𝐬𝐞 𝐧𝐚 𝐡𝐨 𝐩𝐚𝐲𝐞𝐠𝐚 😏**\n\n📍 Added to Gban Watch!!\n**🔰 Total Chats :**  `{chats}`"
     if reason != "":
         gmsg += f"\n**🔰 Reason :**  `{reason}`"
     ogmsg = f"[{name}](tg://user?id={userid}) **Is now GBanned by** {hell_mention} **in**  `{chats}`  **Chats!! 😏**\n\n**📍 Also Added to Gban Watch!!**"
