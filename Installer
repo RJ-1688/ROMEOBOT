@@ -1,6 +1,7 @@
 aiofiles
 aiohttp
 apscheduler
+asyncio
 cairosvg
 cfscrape
 colour
@@ -30,7 +31,7 @@ patool
 Pillow
 prettytable
 psutil
-psycopg2
+psycopg2-binary
 pyfiglet
 PyGithub
 pygments
