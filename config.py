@@ -5,7 +5,7 @@ from RomeoBot.config.hell_config import Config
 class Development(Config):
   # get these values from my.telegram.org. 
   APP_ID = 9    # 9 is a placeholder. Fill your 6 digit api id
-  API_HASH = ""   # replace this with your api hash
+  API_HASH = "53e10a257baaddea9c413a0c4249e731"   # replace this with your api hash
 
   # create any PostgreSQL database.
   # I recommend to use elephantsql and paste that link here
@@ -15,13 +15,13 @@ class Development(Config):
   # Do `python string.py` and fill the on screen prompts.
   # String session will be saved in your saved message of telegram.
   # Put that string here.
-  ROMEOBOT_SESSION = ""
+  ROMEOBOT_SESSION = "Your value"
 
   # Create a bot in @BotFather
   # And fill the following values with bot token and username.
-  BOT_TOKEN = "" #token
+  BOT_TOKEN = "Your value" #token
   #FILL BOT USERNAME WITHOUT @
-  BOT_USERNAME = ""
+  BOT_USERNAME = "Your value"
   # Custom Command Handler. 
   HANDLER = "."
  
