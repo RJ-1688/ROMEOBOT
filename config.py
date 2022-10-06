@@ -9,7 +9,7 @@ class Development(Config):
 
   # create any PostgreSQL database.
   # I recommend to use elephantsql and paste that link here
-  DB_URI = "postgres://wdlsnpmj:Me698p_QlBJsZdpcaXCVt3hjVICZDkrC@mouse.db.elephantsql.com/wdlsnpmj"
+  DB_URI = "postgres://lwftbwjfvfhqce:65f091612658e9ca1cb2362fc5f436519d55f2f0bac09afe5b140147772aa4d8@ec2-54-86-106-48.compute-1.amazonaws.com:5432/d2t6slnsdhqikq"
   ALIVE_NAME = "Romeo"
   # After cloning the repo and installing requirements...
   # Do `python string.py` and fill the on screen prompts.
