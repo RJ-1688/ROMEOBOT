@@ -21,31 +21,6 @@ HEROKU_APP_NAME = Config.HEROKU_APP_NAME
 HEROKU_API_KEY = Config.HEROKU_API_KEY
 
 
-async def restart(event):
-    if HEROKU_APP_NAME and HEROKU_API_KEY:
-        try:
-            Heroku
-        except BaseException:
-            return await eor(event, "`HEROKU_API_KEY` is wrong. Re-Check in config vars.")
-        await eor(event, f"✅ **🇷𝐄𝐒𝐓𝐀𝐑𝐓.. 🇩𝐘𝐍𝐎𝐒** \n**🇹𝐘𝐏𝐄** `{hl}ping` **🇦𝐅𝐓𝐄𝐑 𝐌𝐈𝐍𝐔𝐓𝐄𝐒 𝐂𝐇𝐄𝐂𝐊 𝐈'𝐌 𝐖𝐎𝐑𝐊𝐈𝐍𝐆..**")
-        app = Heroku.apps()[HEROKU_APP_NAME]
-        app.restart()
-    else:
-        await eor(event, f"✅ **🇷𝐄𝐒𝐓𝐀𝐑𝐓... 🇷𝐎𝐌𝐄𝐎𝐁𝐎𝐓** \n**🇹 𝐘𝐏𝐄** `{hl}ping` **🇦𝐅𝐓𝐄𝐑 𝐌𝐈𝐍𝐔𝐓𝐄𝐒 𝐂𝐇𝐄𝐂𝐊 𝐈'𝐌 𝐖𝐎𝐑𝐊𝐈𝐍𝐆..**")
-        await event.client.disconnect()
-
-
-@hell_cmd(pattern="restart$")
-async def re(hell):
-    event = await eor(hell, "🇷𝐞𝐬𝐭𝐚𝐫𝐭𝐢𝐧𝐠...")
-    try:
-        await restart(event)
-    except CancelledError:
-        pass
-    except Exception as e:
-        LOGS.info(e)
-
-
 @hell_cmd(pattern="reload$")
 async def rel(event):
     await eor(event, "🇷𝐄𝐋𝐎𝐀𝐃...")
@@ -291,8 +266,6 @@ def prettyjson(obj, indent=2, maxlinelength=80):
 
 
 CmdHelp("power").add_command(
-  "restart", None, "Restarts your userbot. Redtarting Bot may result in better functioning of bot when its laggy"
-).add_command(
   "reload", None, "Reloads the bot DB and SQL variables without deleting any external plugins if installed."
 ).add_command(
   "shutdown", None, "Turns off RomeoBot. Userbot will stop working unless you manually turn it on."
