@@ -8,7 +8,6 @@ import sys
 
 from os import execl
 from time import sleep
-from asyncio.exceptions import CancelledError
 
 from ..sql.gvar_sql import addgvar, delgvar, gvarstat
 from . import *
