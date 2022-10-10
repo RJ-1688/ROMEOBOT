@@ -15,7 +15,7 @@ class Development(Config):
   # Do `python string.py` and fill the on screen prompts.
   # String session will be saved in your saved message of telegram.
   # Put that string here.
-  ROMEOBOT_SESSION = "1BVtsOJIBu6l-XVj70_qR-j1FjzNVWyZr3r-CSE-Eo-nBJmTCifjYCZJh6vrrWK2Qyr0ILnSW_A6KSy5BMKL82aI-5MiNFVrZ0bn_4aoOIVPghIBLMMsqBNWVpfEpCsV25tekhpTa5oMmWiYd7ATq-jHqRzvH89XALr7Y7RGO3xIINYctMhnYA3oPavStkihMxEp7P3fZ7649GjUbAS_SiyLGryovxQMoNinChRn1ZcVi4MnYdxXOI2yvNScgufg9G2qRg_XU3FjxcIh4t_4yI0MyLtim4knoGirDL47F1ZFtYTyX2qLV6UeWH7bpva1vF7pEjOSGMo2CLxo8YoYYE4xmz-5HVKE="
+  ROMEOBOT_SESSION = "1BVtsOHgBuw3rsvwrB3uzoV1MjG69mDdKegyazeoir7VoJ2Cvq_ZFAAovnGYlmwk1bs6XhdWiUGo_g9qY-UdefA9wknZw89uRA766yqklIN_ZcAc5ns2nx37ZYGF1tC3pSIwUL3xvkhAOrbkFc3HPqza1MmroiLgBf5PKTF2cESJZpGeDYq4xsJQG_XNv3VToGtjZlzh81AwTSuNoU7L378pi9d_wz7ttAZVqm2WzkBhlS3YWFGgmDKeZMsf_nhWWkSoy3e5R-qbV8QCEWO4Y9vFfRtwvV_Cb975lANn0skLlQNT_twRUjO9aEJ4XmJKuOwZ4Hd-X6C653wV8cTJDQky8YM9btXY="
 
   # Create a bot in @BotFather
   # And fill the following values with bot token and username.
